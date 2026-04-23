@@ -1,48 +1,53 @@
 import { CONFIG } from './config.js';
 
-function repairJson(str) {
-  let cleaned = str.trim();
-  const codeBlockMatch = cleaned.match(/```(?:json)?\s*([\s\S]*?)```/);
-  if (codeBlockMatch) {
-    cleaned = codeBlockMatch[1].trim();
-  }
-  cleaned = cleaned.replace(/,\s*([}\]])/g, '$1');
-  cleaned = cleaned.replace(/'/g, '"');
-  cleaned = cleaned.replace(/(\w+)\s*:/g, '"$1":');
-  cleaned = cleaned.replace(/""/g, '"');
+function repairJson(raw) {
+  if (typeof raw !== 'string') return null;
+  let s = raw.trim();
+  if (!s) return null;
 
   try {
-    return JSON.parse(cleaned);
+    return JSON.parse(s);
   } catch {}
 
-  const lastBrace = cleaned.lastIndexOf('}');
-  if (lastBrace > 0) {
-    try {
-      return JSON.parse(cleaned.substring(0, lastBrace + 1) + '}');
-    } catch {
-      try {
-        const arrayMatch = cleaned.match(/\[[\s\S]*\]/);
-        if (arrayMatch) return JSON.parse(arrayMatch[0]);
-      } catch {}
+  const cb = s.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (cb) {
+    s = cb[1].trim();
+    try { return JSON.parse(s); } catch {}
+  }
+
+  s = s.replace(/,\s*([}\]])/g, '$1');
+
+  try { return JSON.parse(s); } catch {}
+
+  const oB = s.indexOf('{');
+  const cB = s.lastIndexOf('}');
+  if (oB !== -1 && cB > oB) {
+    let sub = s.substring(oB, cB + 1);
+    sub = sub.replace(/,\s*([}\]])/g, '$1');
+    try { return JSON.parse(sub); } catch {}
+
+    let depth = 0;
+    let lastValid = -1;
+    for (let i = 0; i < sub.length; i++) {
+      if (sub[i] === '{' || sub[i] === '[') depth++;
+      else if (sub[i] === '}' || sub[i] === ']') {
+        depth--;
+        if (depth === 0) lastValid = i;
+      }
+    }
+    if (lastValid > 0) {
+      try { return JSON.parse(sub.substring(0, lastValid + 1)); } catch {}
     }
   }
 
-  const braceStart = cleaned.indexOf('{');
-  const braceEnd = cleaned.lastIndexOf('}');
-  if (braceStart !== -1 && braceEnd > braceStart) {
-    try {
-      let sub = cleaned.substring(braceStart, braceEnd + 1);
-      let depth = 0;
-      let valid = true;
-      for (const ch of sub) {
-        if (ch === '{' || ch === '[') depth++;
-        if (ch === '}' || ch === ']') depth--;
-        if (depth < 0) { valid = false; break; }
-      }
-      if (valid) return JSON.parse(sub);
-    } catch {}
+  const aMatch = s.match(/\[[\s\S]*\]/);
+  if (aMatch) {
+    let a = aMatch[0];
+    a = a.replace(/,\s*([}\]])/g, '$1');
+    try { return JSON.parse(a); } catch {}
   }
 
+  console.error('  [JSON] All repair attempts failed');
   return null;
 }
 
@@ -195,7 +200,7 @@ export async function analyzeArticles(articles, apiKey) {
       ];
       try {
         const retryResult = await callWithFallback(apiKey, retryMessages);
-        parsed = repairJson(retryResult);
+        parsed = repairJson(retryResult.content);
       } catch (err) {
         console.error(`  [AI] Retry also failed: ${err.message}`);
       }
