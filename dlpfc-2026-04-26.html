@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年4月26日</title>
+<meta name="description" content="2026年4月26日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年4月26日（週日）</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 10 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>右側背外側前額葉陽極tDCS未能改善精神分裂症患者的視空間工作記憶：一項單次、偽刺激對照研究</h3>
+  <p class="journal-source">BMC psychiatry &middot; Anodal tDCS over right DLPFC does not improve visuospatial working memory in schizophrenia: a single-session, sham-controlled study.</p>
+  <p>本項單次session的隨機對照研究發現，針對右側背外側前額葉皮質施加陽極經顱直流電刺激，並未能有效改善精神分裂症患者的視空間工作記憶表現。此結果挑戰了tDCS在精神分裂症認知增強中的普遍假設，提示未來需考量刺激參數與個體差異。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">精神分裂症患者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">右側DLPFC陽極tDCS</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">偽刺激</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">視空間工作記憶表現（無顯著改善）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">tDCS</span><span class="tag">精神分裂症</span><span class="tag">工作記憶</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42035044/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">😴</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>睡眠剝奪與神經調節干預對嗅覺相關大腦功能的影響</h3>
+  <p class="journal-source">Brain topography &middot; Effects of Sleep Deprivation and Neuromodulatory Interventions on Olfactory-Related Brain Function.</p>
+  <p>本研究探討了36小時睡眠剝奪後，左側DLPFC的tDCS與其他神經調節技術對嗅覺相關腦區功能的恢復效果。結果顯示短期的神經調節雖能部分改善網路層級的連接性，但不足以完全恢復睡眠剝奪造成的局部神經活動損害。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">健康男性受試者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">左側DLPFC tDCS及合併刺激</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無刺激對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">嗅覺相關腦區的局部神經活動與功能連接性</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">睡眠剝奪</span><span class="tag">tDCS</span><span class="tag">神經調節</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42029828/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🎯</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>靶向中樞免疫信號增強哌甲酯緩解5xFAD小鼠冷漠樣行為的效果</h3>
+  <p class="journal-source">Scientific reports &middot; Targeting central immune signaling enhances the effects of methylphenidate in alleviating apathy-like behavior in 5xFAD mice.</p>
+  <p>研究證實阿茲海默症模型小鼠前額葉皮質的補體介導免疫失調與冷漠行為密切相關，合併使用C3a受體拮抗劑與哌甲酯能顯著改善築巢行為並恢復PFC樹突棘密度。此結果為治療AD冷漠症狀提供了雙靶點的創新臨床轉譯策略。</p>
+  
+  <div class="card-footer">
+    <span class="tag">阿茲海默症</span><span class="tag">冷漠</span><span class="tag">免疫治療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42034805/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">💊</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>機制引導的鑑定抗憂鬱G蛋白偶聯受體藥物靶點</h3>
+  <p class="journal-source">Cell &middot; Mechanism-guided identification of antidepressant G protein-coupled receptor drug targets.</p>
+  <p>本研究解析了氯胺酮快速抗憂鬱的機制，發現其依賴於內側前額葉皮質中生長抑素表達中間神經元上的μ型鴉片受體。基於此機制，研究進一步篩選出多個mPFC特異性GPCR靶點，並證實協同靶向多個GPCR能產生強效且副作用較低的抗憂鬱效果。</p>
+  
+  <div class="card-footer">
+    <span class="tag">氯胺酮</span><span class="tag">GPCR</span><span class="tag">抗憂鬱藥</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42030928/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🧲</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>刺激成功？！前額葉單點與條件-干擾經顱磁刺激改善反應抑制表現</h3>
+  <p class="journal-source">Cognitive, affective &amp; behavioral neuroscience &middot; Stimulation success!? Improved response inhibition performance after prefrontal single-site and condition-and-perturb transcranial magnetic stimulation.</p>
+  <p>本研究探討針對右側前額葉不同區域的TMS對停止信號任務的影響，結果出人意料地發現TMS不僅未損害反而顯著促進了反應抑制表現，縮短了停止信號反應時間。這挑戰了TMS抑制性協議的傳統觀點，提示TMS可能透過優化信噪比增強認知控制。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">健康受試者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">右側前額葉皮質TMS</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無TMS基線</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">停止信號反應時間 (SSRT顯著降低)</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">TMS</span><span class="tag">反應抑制</span><span class="tag">認知增強</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42032211/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📊</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>伴隨擔憂的主觀認知衰退者認知表現之年齡與性別差異：來自加拿大長期老化研究的發現</h3>
+  <p class="journal-source">Journal of neuropsychology</p>
+  <p>本研究透過大型縱向資料庫分析發現，主觀認知衰退（SCD）的臨床意義隨年齡增長而增加，尤其在 75 歲以上族群中出現顯著的語義流暢性與延遲回憶下降。這些發現有助於提升 SCD 作為阿茲海默症前臨床階段篩檢工具的臨床實用性。</p>
+  <div class="card-footer">
+    <span class="tag">主觀認知衰退</span><span class="tag">認知老化</span><span class="tag">族群篩檢</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42011061/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>人類背外側前額葉皮質中生長抑素與小白蛋白抑制性中間神經元亞型的轉錄特徵：對精神分裂症的意義</h3>
+  <p class="journal-source">The American journal of psychiatry</p>
+  <p>本研究利用單核 RNA 定序，全面解析了人類背外側前額葉皮質中 37 種抑制性中間神經元亞型的轉錄特徵與比例。研究鑑別出多個具有獨特分子特性的亞型，為未來探討精神分裂症中特定神經元亞型的缺失或功能異常提供了精確的基線參考。</p>
+  <div class="card-footer">
+    <span class="tag">精神分裂症</span><span class="tag">單核RNA定序</span><span class="tag">抑制性中間神經元</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42014962/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔬</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>情感-精神病譜系中多模態小膠質細胞與犬尿氨酸途徑的改變：模式、異質性與維度影響的系統性回顧</h3>
+  <p class="journal-source">Molecular psychiatry</p>
+  <p>此系統性回顧整合了 TSPO-PET、腦脊液犬尿氨酸代謝物及死後小膠質細胞研究，提出連結全身免疫至大腦迴路的跨診斷框架。研究發現小膠質細胞相關的改變更能由生物學亞群與症狀維度解釋，而非單純依賴類別診斷。</p>
+  <div class="card-footer">
+    <span class="tag">小膠質細胞</span><span class="tag">犬尿氨酸途徑</span><span class="tag">系統性回顧</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42014469/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🩸</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>兒童期發病之系統性紅斑狼瘡青少年患者升高的血清腦損傷標誌物與疾病活動度、促炎細胞因子及認知功能障礙相關</h3>
+  <p class="journal-source">Lupus science &amp; medicine</p>
+  <p>本跨斷面研究發現，兒童期發病之 SLE 青少年的血清 GFAP 與 Tau 水平顯著高於健康對照組，且高濃度腦損傷標誌物與疾病活動度、IL-6 濃度及嚴重認知功能障礙密切相關。此結果提示全身發炎可能導致臨床難以察覺的神經膠質與神經元損傷。</p>
+  <div class="card-footer">
+    <span class="tag">系統性紅斑狼瘡</span><span class="tag">生物標誌物</span><span class="tag">認知功能障礙</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42020152/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧪</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>血漿馮·維勒布蘭德因子與 ADAMTS13 與 APOE-ε4 交互作用以預測長達 9 年隨訪的腦萎縮與認知衰退</h3>
+  <p class="journal-source">Journal of the American Heart Association</p>
+  <p>為期 9 年的縱向研究顯示，較低的基線 ADAMTS13 水平可預測更快的整體認知衰退與額葉白質高信號體積增加，且此效應主要由 APOE-ε4 攜帶者驅動。VWF 則在非 APOE-ε4 攜帶者中與更快的灰質萎縮相關，揭示了凝血因子在腦部老化中的複雜角色。</p>
+  <div class="card-footer">
+    <span class="tag">生物標誌物</span><span class="tag">腦萎縮</span><span class="tag">縱向研究</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42003668/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">臨床研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">3</span>
+    </div><div class="topic-row">
+      <span class="topic-name">轉譯研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床轉譯與生物標誌物</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">精神疾病病理機制</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經免疫與發炎</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">認知老化與評估</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">tDCS</span><span class="keyword">精神分裂症</span><span class="keyword">工作記憶</span><span class="keyword">睡眠剝奪</span><span class="keyword">神經調節</span><span class="keyword">阿茲海默症</span><span class="keyword">冷漠</span><span class="keyword">免疫治療</span><span class="keyword">氯胺酮</span><span class="keyword">GPCR</span><span class="keyword">抗憂鬱藥</span><span class="keyword">TMS</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：GLM-5-Turbo</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
