@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年5月21日</title>
+<meta name="description" content="2026年5月21日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年5月21日（週四）</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 10 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>高定義經顱直流電刺激改善腦小血管病患者的認知功能：一項基於橫斷面分析的開放標記先導性研究</h3>
+  <p class="journal-source">Current neuropharmacology &middot; High-definition Transcranial Direct Current Stimulation Improves Cognitive Function in Patients with Cerebral Small Vessel Disease: An Open-label Pilot Study Informed by Cross-sectional Analysis.</p>
+  <p>針對左側背外側前額葉皮質的HD-tDCS能顯著改善腦小血管病患者的整體認知與記憶功能。治療機制可能透過降低海馬迴與左側背外側額上回之間的靜息態功能連結來實現。此研究為血管性認知障礙的非侵入性腦刺激治療提供了新穎的靶點與初步臨床證據。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">腦小血管病患者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">針對左側背外側前額葉皮質的高定義經顱直流電刺激</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">治療前後基線對照</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">認知功能評分改善與海馬-前額葉功能連結變化</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">腦小血管病</span><span class="tag">HD-tDCS</span><span class="tag">認知功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42163676/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🏋️‍♀️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>有氧與阻力運動對經前症候群年輕女性焦慮減輕與情緒干擾的影響：一項隨機對照 fNIRS 研究</h3>
+  <p class="journal-source">Journal of affective disorders &middot; Effects of aerobic vs. resistance exercise on anxiety reduction and emotional interference in young women with premenstrual syndrome: A randomized controlled fNIRS study.</p>
+  <p>針對經前症候群女性，8週的中等強度阻力運動在減輕焦慮與改善情緒干擾抑制方面優於有氧運動。fNIRS顯示阻力運動組在負面條件下左側背外側前額葉皮質的血氧濃度增加更為顯著。該研究為PMS的運動處方提供了具體的神經生理學依據。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">患有經前症候群的大學女生</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">8週中等強度有氧運動或阻力運動</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無運動干預的控制組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">焦慮自評量表得分、情緒Stroop反應時間與前額葉血氧變化</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">經前症候群</span><span class="tag">阻力運動</span><span class="tag">fNIRS</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42162624/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">💊</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>輔助使用D-環絲氨酸結合間歇性竇波經顱磁刺激治療纖維肌痛症：一項隨機安慰劑對照試驗</h3>
+  <p class="journal-source">Neuropsychopharmacology &middot; Adjunctive D-cycloserine to intermittent theta-burst transcranial magnetic stimulation in fibromyalgia: a randomized placebo-controlled trial.</p>
+  <p>針對左側背外側前額葉皮質的iTBS對纖維肌痛症狀有極大的整體改善效果，但輔助D-環絲氨酸並未進一步減輕纖維肌痛主要症狀。然而，iTBS合併D-環絲氨酸在改善伴隨的憂鬱症狀方面顯著優於單純iTBS合併安慰劑。此結果為難治性慢性疼痛的合併神經調節與藥物增強策略提供了重要參考。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">纖維肌痛症成人患者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">左側DLPFC的iTBS輔助D-環絲氨酸</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">iTBS輔助安慰劑</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">纖維肌痛影響問卷評分與憂鬱症狀變化</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">纖維肌痛症</span><span class="tag">經顱磁刺激</span><span class="tag">藥物增強</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42162266/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">☢️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>兒童與青少年長期接觸家居氡氣導致支持流體推理能力的神經效率下降的證據</h3>
+  <p class="journal-source">Neurotoxicology and teratology &middot; Evidence of decreased neural efficiency supporting fluid reasoning abilities in children and adolescents chronically exposed to home radon.</p>
+  <p>研究發現長期暴露於較高室内氡氣濃度的青少年在進行抽象推理時反應時間顯著變慢，且右側內側前額葉皮質出現代償性的頻段增強，顯示神經效率下降。這項發現強調了環境神經毒素對發育中大腦認知網路的潛在長期損害。此研究對公共衛生政策與兒童環境暴露防護具有高度臨床提示價值。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">8至15歲神經典型兒童與青少年</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">長期居家氡氣暴露</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低氡氣暴露對照</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">抽象推理任務反應時間與前額葉腦磁圖信號變化</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">氡氣暴露</span><span class="tag">神經發育</span><span class="tag">流體推理</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42155736/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🦠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>腸躁症的腦部靶向治療：機制與策略</h3>
+  <p class="journal-source">Current neuropharmacology &middot; Brain-targeted Therapies for Irritable Bowel Syndrome: Mechanisms and Strategies.</p>
+  <p>本文綜述了腸躁症作為腸腦軸失調疾病的神經影像學特徵，特別是前額葉皮質、前扣帶皮質與島葉的適應性不良神經可塑性變化。文章探討了認知行為療法、腸道定向催眠、針灸及特定益生菌等針對中樞神經系統的治療策略及其恢復大腦穩態的機制。這為臨床醫師採用腦部驅動的精準醫學治療腸躁症提供了實用框架。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">N/A</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">N/A</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">N/A</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">N/A</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">腸躁症</span><span class="tag">腦腦軸</span><span class="tag">神經調節</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42163675/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📱</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>評估基於手機語音識別的數位認知篩檢工具在中國老年族群中的表現：一項橫斷面研究</h3>
+  <p class="journal-source">Geriatric nursing (New York, N.Y.)</p>
+  <p>本研究驗證了一款基於語音識別的數位認知篩檢工具（DCS），發現其自動評分與人工評分高度相關，且能有效區分認知障礙與正常族群。整合執行功能項目進一步提升了篩檢靈敏度，顯示其作為社區篩檢工具的巨大潛力。</p>
+  <div class="card-footer">
+    <span class="tag">數位篩檢</span><span class="tag">執行功能</span><span class="tag">老年醫學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42160943/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">👌</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>帕金森氏症患者觸控螢幕的使用：頻率、認知與上肢功能</h3>
+  <p class="journal-source">Disability and rehabilitation. Assistive technology</p>
+  <p>研究發現帕金森氏症患者日常觸控螢幕的使用頻率主要受執行功能預測，且打字表現與整體認知能力高度相關。結果建議在針對該族群的輔助科技評估與介入中，應將認知功能（特別是執行功能）納為核心考量。</p>
+  <div class="card-footer">
+    <span class="tag">帕金森氏症</span><span class="tag">輔助科技</span><span class="tag">執行功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42159597/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>阿茲海默症連續體中神經發炎的階段依賴性動態變化</h3>
+  <p class="journal-source">Brain, behavior, and immunity</p>
+  <p>研究揭示了星形膠質細胞標記物 GFAP 和 YKL-40 在阿茲海默症不同病程中，與病理及認知功能（包含執行功能）有著截然不同的關聯模式。此發現對於精準解讀血液生物標記及疾病分期具有重要的臨床指導意義。</p>
+  <div class="card-footer">
+    <span class="tag">阿茲海默症</span><span class="tag">血液生物標記</span><span class="tag">神經發炎</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42162804/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧘</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>中老年黑人成年人的休閒活動參與、靈性與認知功能</h3>
+  <p class="journal-source">The journals of gerontology. Series B, Psychological sciences and social sciences</p>
+  <p>研究指出較高的休閒活動參與度與更好的處理速度、執行功能及記憶學習表現相關。特別是在高靈性個體中，休閒活動對語言/命名能力的保護作用更為顯著，為開發結合靈性與休閒的認知促進方案提供了依據。</p>
+  <div class="card-footer">
+    <span class="tag">老年認知</span><span class="tag">休閒活動</span><span class="tag">靈性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42157404/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧩</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>唐氏綜合徵與脆性X綜合徵青少年語言與執行功能的關係</h3>
+  <p class="journal-source">Journal of neurodevelopmental disorders</p>
+  <p>本研究透過實驗任務發現唐氏綜合徵與脆性X綜合徵患者的文法能力與工作記憶顯著相關，且兩組在實驗任務中的表現差異與家長問卷結果不一致。這挑戰了傳統標準化測驗的結論，對臨床語言與執行功能評估工具的選擇具有啟示意義。</p>
+  <div class="card-footer">
+    <span class="tag">神經發展障礙</span><span class="tag">語言評估</span><span class="tag">工作記憶</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42163090/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">臨床試驗</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">3</span>
+    </div><div class="topic-row">
+      <span class="topic-name">觀察性研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">文獻綜述</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">數位醫療</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經康復</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經退化性疾病</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">老年精神醫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經發展障礙</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">腦小血管病</span><span class="keyword">HD-tDCS</span><span class="keyword">認知功能</span><span class="keyword">經前症候群</span><span class="keyword">阻力運動</span><span class="keyword">fNIRS</span><span class="keyword">纖維肌痛症</span><span class="keyword">經顱磁刺激</span><span class="keyword">藥物增強</span><span class="keyword">氡氣暴露</span><span class="keyword">神經發育</span><span class="keyword">流體推理</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：GLM-5-Turbo</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
