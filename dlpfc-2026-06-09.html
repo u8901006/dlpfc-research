@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年6月9日</title>
+<meta name="description" content="2026年6月9日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年6月9日（週二）</span>
+        <span class="badge badge-count">📊 25 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 25 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🏃‍♂️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>老年人改善執行功能的最佳運動類型與劑量：隨機對照試驗的系統性回顧與貝氏網絡統合分析</h3>
+  <p class="journal-source">BMC geriatrics &middot; Optimal type and dose of exercise for improving executive functions in older adults: a systematic review and Bayesian model-based network meta-analysis of RCTs.</p>
+  <p>本研究透過貝氏網絡統合分析發現，有氧運動是提升健康老年人整體執行功能的最有效方式。針對不同執行功能子領域，建議個性化劑量（如認知靈活性約 530 MET-min/週），支持現有 WHO 運動指南並提供更精準的運動處方依據。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">65歲以上老年人</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">不同類型與劑量的運動（有氧、阻力、身心調節）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同運動類型與劑量互相比較</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">執行功能（工作記憶、抑制控制、認知靈活性）改善效果</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">老年人</span><span class="tag">運動處方</span><span class="tag">執行功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42260365/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🧲</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>經顱磁刺激治療抑鬱症的標準化程度如何？大型隊列模型揭示系統性劑量學差異</h3>
+  <p class="journal-source">Psychotherapy and psychosomatics &middot; How Standardized is Transcranial Magnetic Stimulation Treatment for Depression? Large-Cohort Modeling Reveals Systematic Dosimetric Variability.</p>
+  <p>透過大規模計算模型發現，傳統統一使用 120% 運動閾值的 rTMS 劑量方案，會因不同族群的頭皮到皮層距離差異，導致左側背外側前額葉的實際電場強度產生系統性偏差。研究提供了個體化劑量調整公式與網頁工具，對全球 rTMS 治療標準化具有重要臨床意義。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">接受rTMS治療的抑鬱症患者（模擬數據）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">基於頭部形態與皮層距離的個體化劑量調整</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">傳統統一 120% 運動閾值劑量</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">左側背外側前額葉的誘發電場準確性與一致性</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">重複經顱磁刺激</span><span class="tag">抑鬱症</span><span class="tag">劑量學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42258597/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🏥</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>虛擬症狀引導有氧運動改善輕度創傷性腦損傷認知功能的可行性與療效：單盲前瞻性隨機對照試驗</h3>
+  <p class="journal-source">The Journal of head trauma rehabilitation &middot; The Feasibility and Efficacy of a Virtual, Symptom-Guided Aerobic Exercise Intervention to Improve Cognition in Mild Traumatic Brain Injury: A Single-Blind Pilot Randomized Control Trial With an Active Comparator Group.</p>
+  <p>針對輕度創傷性腦損傷患者，為期12週的虛擬症狀引導有氧運動展現出極高的可行性與安全性。與主動控制組（平衡訓練）相比，有氧運動組在認知靈活性（連線測驗）與睡眠品質上呈現大效應量的顯著改善。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">18-55歲輕度創傷性腦損傷成人</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">虛擬症狀引導有氧運動</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">虛擬平衡訓練（主動對照）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">執行功能（認知靈活性）與睡眠品質</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">腦震盪</span><span class="tag">有氧運動</span><span class="tag">數位醫療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42260617/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">🍷</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>fNIRS 識別右側前額葉血流動力學特徵以亞型分類酒精使用障礙</h3>
+  <p class="journal-source">Cognitive neurodynamics &middot; fNIRS identifies right prefrontal hemodynamic signatures for subclassifying Alcohol Use Disorder.</p>
+  <p>研究利用 fNIRS 監測前額葉在酒精線索暴露下的血氧變化，成功區分急性發作型與多症狀型酒精使用障礙。右側前額葉（特別是右中額回）的血氧信號被證實可作為客觀分類的生物標誌物，有助於未來精準介入。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">男性酒精使用障礙患者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">fNIRS 監測前額葉血氧動力學（酒精線索暴露任務）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">急性發作型 vs. 多症狀型亞型比較</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">AUD 亞型分類的預測準確度</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">酒精使用障礙</span><span class="tag">fNIRS</span><span class="tag">生物標誌物</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42255351/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🎮</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>旨在評估自閉症兒童執行計畫技能的嚴肅遊戲：ShopAutiPlan 的橫斷面設計與形成性評估</h3>
+  <p class="journal-source">JMIR serious games &middot; Serious Game Aimed at Assessing Executive Planning Skills in Children With Autism: Cross-Sectional Design and Formative Evaluation of ShopAutiPlan.</p>
+  <p>本研究開發並評估了首款專門用於評估自閉症兒童執行計畫能力的超市模擬嚴肅遊戲。基於認知計畫理論設計，通過專家可用性測試（SUS得分&gt;68），證實其作為傳統神經心理評估補充工具的潛力。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">自閉症兒童（專家評估階段）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">ShopAutiPlan 嚴肅遊戲系統</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">傳統神經心理學評估</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">系統可用性與理論建構效度</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">自閉症</span><span class="tag">嚴肅遊戲</span><span class="tag">計畫能力</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42258700/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧓</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>神經質在老年女性靜息態大腦活動與連結對亞臨床抑鬱症關聯中的中介效應</h3>
+  <p class="journal-source">The journals of gerontology. Series B, Psychological sciences and social sciences</p>
+  <p>研究發現老年女性亞臨床抑鬱症與左側外側眶額葉皮質（LOFC）活動增高及 LOFC-內側眶額葉連結增強有關。神經質人格特質在這些神經變化與抑鬱症狀之間扮演關鍵的中介角色。</p>
+  <div class="card-footer">
+    <span class="tag">抑鬱症</span><span class="tag">眶額葉皮質</span><span class="tag">神經質</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42261263/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🌸</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>圍絕經期女性靜息態功能性磁振造影中的預設模式網路功能變化</h3>
+  <p class="journal-source">Open medicine (Warsaw, Poland)</p>
+  <p>圍絕經期女性在雙側中額回（前額葉區域）、左腦島及後扣帶回的預設模式網路連結顯著增強。這種功能重組可能是在雌激素下降背景下，為維持認知與情緒穩定而產生的代償機制。</p>
+  <div class="card-footer">
+    <span class="tag">圍絕經期</span><span class="tag">預設模式網路</span><span class="tag">雌激素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42254985/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔬</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>延長固定時間對死後人類腦組織血管生物標誌物的影響</h3>
+  <p class="journal-source">Journal of cerebral blood flow and metabolism : official journal of the International Society of Cerebral Blood Flow and Metabolism</p>
+  <p>評估前額葉皮質在福馬林中固定1至20年對血管等生物標誌物染色的影響。發現鐵蛋白、波形蛋白、膠原蛋白IV及銀染強度隨固定時間延長而顯著下降，建議在神經病理分析中將固定時長作為協變數控制。</p>
+  <div class="card-footer">
+    <span class="tag">屍檢腦組織</span><span class="tag">血管生物標誌物</span><span class="tag">組織學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42257420/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🦠</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>早期胃腸道發炎與發育中大腦：揭開長期認知功能障礙的路徑</h3>
+  <p class="journal-source">World journal of clinical pediatrics</p>
+  <p>本綜述探討早期腸腦軸破壞如何透過全身發炎、微量營養素缺乏及白質改變，導致長期的注意力與前額葉相關執行功能缺陷。強調早期嚴重胃腸道疾病應被視為神經認知風險的警訊。</p>
+  <div class="card-footer">
+    <span class="tag">腸腦軸</span><span class="tag">兒童發展</span><span class="tag">執行功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42220960/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💔</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>老年人的生活壓力事件與認知功能：性別與心理韌性的角色</h3>
+  <p class="journal-source">The journals of gerontology. Series B, Psychological sciences and social sciences</p>
+  <p>縱向研究顯示，終身創傷經歷會增加輕度認知障礙與失智症風險，並損害記憶與執行功能。心理韌性對男性執行功能的保護作用及緩衝創傷對工作記憶的影響顯著強於女性。</p>
+  <div class="card-footer">
+    <span class="tag">壓力生活事件</span><span class="tag">心理韌性</span><span class="tag">認知老化</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42261258/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🤰</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>妊娠期高血壓疾病後的兒童神經發育結果</h3>
+  <p class="journal-source">Pregnancy hypertension</p>
+  <p>分析顯示，子宮內暴露於妊娠期高血壓疾病的4-8歲兒童，其整體神經發育測驗分數較低，其中在「執行功能」領域的減退達到統計顯著。子癇前症對長期執行功能的負面影響可能大於妊娠高血壓。</p>
+  <div class="card-footer">
+    <span class="tag">妊娠高血壓</span><span class="tag">神經發育</span><span class="tag">兒童</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42259106/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🩸</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>臨床未受損參與者血漿 p-Tau217 與認知領域表現的關聯：來自 HABS-HD 的證據</h3>
+  <p class="journal-source">Alzheimer&#039;s &amp; dementia (Amsterdam, Netherlands)</p>
+  <p>在臨床未受損族群中，較高的血漿 p-Tau217 與整體認知（含執行功能）變差相關，但此關聯在不同種族間存在顯著差異。非西班牙裔白人中的關聯最強，凸顯了在阿茲海默症生物標誌物應用上考量族裔差異的必要性。</p>
+  <div class="card-footer">
+    <span class="tag">阿茲海默症</span><span class="tag">生物標誌物</span><span class="tag">種族差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42255951/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>腦瘤治療兒童的神經網路破壞及其對情緒調節與執行功能的影響</h3>
+  <p class="journal-source">Neuropsychologia</p>
+  <p>兒童腦瘤幸存者呈現出比執行功能更嚴重的情緒調節缺陷。結構連結性的破壞會導致神經同步異常，進而同時損害情緒調節與執行功能，證實這兩個認知維度是受大腦網路組織深度交織的相互依存領域。</p>
+  <div class="card-footer">
+    <span class="tag">兒童腦瘤</span><span class="tag">情緒調節</span><span class="tag">神經網路</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41876084/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚡</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>刺激啟動與心理狀態塑造前額葉間歇性 Theta 爆發刺激後的功能連結</h3>
+  <p class="journal-source">Imaging neuroscience (Cambridge, Mass.)</p>
+  <p>探討 TBS 啟動對前額葉 iTBS 後靜息態功能連結的影響。出乎意料的是，無論是 cTBS 或 iTBS 啟動，都未能增強反而減弱了連結變化，且反覆思考的心理狀態會進一步調節此效應，凸顯了神經調節研究中考量狀態依賴性的重要性。</p>
+  <div class="card-footer">
+    <span class="tag">經顱磁刺激</span><span class="tag">神經調節</span><span class="tag">啟動效應</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42253606/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🤸‍♂️</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>粗大動作協調運動對發展協調障礙症狀學齡初期兒童知覺過程與實作能力的影響：隨機對照研究初步報告</h3>
+  <p class="journal-source">Medical science monitor : international medical journal of experimental and clinical research</p>
+  <p>針對有發展協調障礙症狀的兒童，跨中線的雙側整合運動能在短期內顯著改善序列實作能力與雙側運動協調。研究支持跨中線運動能促進背外側前額葉等皮層的可塑性與興奮性。</p>
+  <div class="card-footer">
+    <span class="tag">發展協調障礙</span><span class="tag">運動干預</span><span class="tag">兒童</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42260939/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">👶</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>透過早期年份工具箱（EYT）建立學齡前兒童執行功能的常模參考值</h3>
+  <p class="journal-source">Child neuropsychology : a journal on normal and abnormal development in childhood and adolescence</p>
+  <p>本研究針對567名西班牙3-6歲學齡前兒童，建立了涵蓋工作記憶、抑制控制與認知靈活性的年齡與性別特定常模。結果顯示女孩在多數執行功能任務表現優於男孩，為臨床評估提供了重要的文化適配參考基準。</p>
+  <div class="card-footer">
+    <span class="tag">學齡前兒童</span><span class="tag">評估工具</span><span class="tag">常模</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42261640/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧩</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>阿茲海默症及相關 Tau 蛋白質病變中的皮層丘腦迴路與執行功能障礙</h3>
+  <p class="journal-source">The Journal of physiology</p>
+  <p>本文探討阿茲海默症及其他 Tau 蛋白質病變中，前額葉皮層與丘腦之間的迴路退化如何導致執行功能障礙。</p>
+  <div class="card-footer">
+    <span class="tag">阿茲海默症</span><span class="tag">丘腦皮質迴路</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42260606/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🕸️</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>前額葉皮質中神經凝膠蛋白的耗損會損害時間順序辨識、認知靈活性與環體 GABA 能神經支配</h3>
+  <p class="journal-source">Cellular and molecular neurobiology</p>
+  <p>在小鼠前額葉下緣皮質耗損神經凝膠蛋白會改變周圍神經網絡結構，減少 PV+ 中間神經元的 GABA 能神經支配，從而導致時間順序記憶與認知靈活性等 PFC 依賴性認知功能受損。</p>
+  <div class="card-footer">
+    <span class="tag">細胞外基質</span><span class="tag">GABA神經元</span><span class="tag">認知靈活性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42260248/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧬</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>轉錄組分析識別阿茲海默症中受性別與大腦區域影響的以周細胞為中心的信號程序</h3>
+  <p class="journal-source">Communications biology</p>
+  <p>透過單細胞 RNA 定序分析阿茲海默症患者背外側前額葉與顳中回的周細胞，發現女性特定區域存在 TGFβ 信號上調與雌激素路徑下調，揭示周細胞驅動的通訊是女性易患 AD 的機制貢獻者。</p>
+  <div class="card-footer">
+    <span class="tag">阿茲海默症</span><span class="tag">周細胞</span><span class="tag">性別差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42260160/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📡</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>前額葉伽馬振盪動態啟動特定的細胞類型配置以支持靈活行為</h3>
+  <p class="journal-source">Neuron</p>
+  <p>利用雙色電壓指示劑與光遺傳學在小鼠中揭示，前額葉 PV 中間神經元會與投射至丘腦的神經元動態同步，產生多種分散式伽馬同步模式。這證明伽馬振盪並非單一現象，而是由特定細胞類型定義、為特定功能動態招募的多樣性主題。</p>
+  <div class="card-footer">
+    <span class="tag">伽馬振盪</span><span class="tag">認知靈活性</span><span class="tag">神經迴路</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42259288/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🗺️</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>大鼠吻端至紋狀體屏狀核的優勢內側屏狀核輸入與眶額葉皮質輸出</h3>
+  <p class="journal-source">Biochemical and biophysical research communications</p>
+  <p>大鼠追蹤實驗發現，吻端至紋狀體的屏狀核除了與廣泛皮層有互動外，特別接收來自內側屏狀核的強烈輸入，並優先將整合後的資訊輸出至眶額葉皮質，支持結果預測功能。</p>
+  <div class="card-footer">
+    <span class="tag">屏狀核</span><span class="tag">眶額葉皮質</span><span class="tag">神經解剖</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42259202/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🐒</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>獼猴上丘中全腦覺醒信號與運動計畫的分離</h3>
+  <p class="journal-source">eLife</p>
+  <p>在恆河猴執行記憶引導眼跳任務時發現，上丘中的覺醒信號（與瞳孔大小及前額葉活動相關的低維度模式）在群體神經活動空間中與運動啟動信號是完全分離的，確保認知狀態變化不會干擾運動輸出的精確度。</p>
+  <div class="card-footer">
+    <span class="tag">上丘</span><span class="tag">覺醒</span><span class="tag">眼動</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42258377/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🛌</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>慢性 REM 睡眠剝奪誘發雄性 Wistar 大鼠代謝與神經毒性改變伴隨情感與認知缺陷：涉及 HPA 軸、膽鹼能、發炎及氧化壓力路徑</h3>
+  <p class="journal-source">Neurochemical research</p>
+  <p>五週的 REM 睡眠剝奪導致大鼠出現葡萄糖不耐與胰島素抗性，並在前額葉皮質、海馬迴等區域引發膽鹼能傳遞障礙、氧化壓力與神經毒性，伴隨顯著的焦慮、抑鬱及學習記憶損害。</p>
+  <div class="card-footer">
+    <span class="tag">睡眠剝奪</span><span class="tag">代謝障礙</span><span class="tag">神經毒性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42257770/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">👶</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>人類嬰兒內側前額葉皮質對微笑反應的變異性與催產素系統的基因變異有關</h3>
+  <p class="journal-source">Social neuroscience</p>
+  <p>研究發現7個月大嬰兒內側前額葉皮質對微笑的反應強度，與催產素釋放相關的 CD38 基因變異有關，但對生氣或恐懼面孔則無此關聯，證實催產素相關的遺傳變異從人類個體發育早期就開始塑造社會大腦功能。</p>
+  <div class="card-footer">
+    <span class="tag">嬰兒發展</span><span class="tag">催產素</span><span class="tag">社會認知</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42257672/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧪</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>整合轉錄組鑑定與驗證揭示睡眠剝奪中關鍵的自噬相關生物標誌物</h3>
+  <p class="journal-source">PeerJ</p>
+  <p>透過生物資訊學與大鼠實驗驗證，鑑定出 CDKN1A、HSPA5 和 NR4A1 三個在睡眠剝奪中顯著異常的自噬相關基因。這些基因在血管內皮、膠質細胞和神經元中分別高表達，為睡眠剝奪引發的微環境改變提供了新穎的分子標誌物。</p>
+  <div class="card-footer">
+    <span class="tag">睡眠剝奪</span><span class="tag">自噬</span><span class="tag">轉錄組學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42254657/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">臨床研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">13</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:69%"></div></div>
+      <span class="topic-count">9</span>
+    </div><div class="topic-row">
+      <span class="topic-name">文獻回顧</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:15%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">方法學研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:8%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">老年人</span><span class="keyword">運動處方</span><span class="keyword">執行功能</span><span class="keyword">重複經顱磁刺激</span><span class="keyword">抑鬱症</span><span class="keyword">劑量學</span><span class="keyword">腦震盪</span><span class="keyword">有氧運動</span><span class="keyword">數位醫療</span><span class="keyword">酒精使用障礙</span><span class="keyword">fNIRS</span><span class="keyword">生物標誌物</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：GLM-5-Turbo</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
