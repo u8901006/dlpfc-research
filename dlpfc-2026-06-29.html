@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年6月29日</title>
+<meta name="description" content="2026年6月29日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年6月29日（週一）</span>
+        <span class="badge badge-count">📊 28 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 28 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🍄</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>蕈毒蕈鹼減少恐懼記憶並修復海馬體與內側前額葉皮質的神經可塑性</h3>
+  <p class="journal-source">Journal of psychopharmacology (Oxford, England) &middot; Psilocybin reduces fear memory and restores neuroplasticity in the hippocampus and medial prefrontal cortex.</p>
+  <p>單次劑量蕈毒蕈鹼通過促進海馬體與內側前額葉皮質的結構可塑性（增加樹突分支和突觸蛋白），顯著減少小鼠的條件性恐懼反應，表明其在治療PTSD相關恐懼記憶方面具有巨大潛力。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">動物模型（5xFAD小鼠）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">單次劑量蕈毒蕈鹼 (2.5 mg/kg)</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">安慰劑對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">條件性恐懼反應減少及海馬體/內側前額葉皮質神經可塑性增強</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">精神科藥物</span><span class="tag">恐懼記憶</span><span class="tag">神經可塑性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42365496/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>阿茲海默病模型中早期皮質紋狀體高活動性損害認知靈活性及紋狀體膽鹼能功能</h3>
+  <p class="journal-source">Nature communications &middot; Early-Stage Corticostriatal Hyperactivity Impairs Cognitive Flexibility Alongside Striatal Cholinergic Dysfunction in an Alzheimer&#039;s Disease Model.</p>
+  <p>在5xFAD小鼠中，前額葉皮質至紋狀體的谷氨酸能傳遞增強並伴隨膽鹼能機能下降，這種皮質紋狀體高活動性是導致認知靈活性缺陷的早期關鍵機制。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">5xFAD阿茲海默症小鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">化學遺傳學抑制皮質紋狀體迴路</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">假手術對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">認知靈活性（工具反轉學習）的改善及皮層/膽鹼能水平的恢復</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">阿茲海默症</span><span class="tag">皮質紋狀體迴路</span><span class="tag">認知靈活性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42362551/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🧩</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>背外側前額葉皮質戰略中止與長期政策優化的神經與計算相關性</h3>
+  <p class="journal-source">Nature communications &middot; Neural and computational correlates of strategic aborting and long-run policy optimization in the dorsolateral prefrontal cortex.</p>
+  <p>研究發現恆河猴在背外側前額葉皮質中編碼了未來中止選擇的預期價值，該區域充當閉環行為中的專門政策模組，負責平衡短期與長期目標。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">恆河猴</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">虛擬現實導航任務中的戰略中止</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">非戰略性中止或持續選擇</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">長期收益最大化及背外側前額葉皮質的活動模式</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">計算神經科學</span><span class="tag">決策制定</span><span class="tag">前額葉皮質</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42362568/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">👁️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>鼠類連續表現測試中內側前額葉皮質-藍斑投射神經元的頂層注意控制</h3>
+  <p class="journal-source">Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology &middot; Top-down control of sustained attention by medial prefrontal cortex-locus coeruleus (mPFC-LC) projection neurons during the rodent continuous performance test (rCPT).</p>
+  <p>化學遺傳學激活內側前額葉皮質至藍斑的投射神經元可顯著改善注意力的辨別能力，該效應依賴於前額葉皮質內去甲腎上腺素水平的升高。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">小鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">化學遺傳學激活mPFC-LC投射神經元</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">非選擇性激活或抑制mPFC神經元</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">連續表現測試中的注意力表現改善</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">注意力</span><span class="tag">去甲腎上腺素</span><span class="tag">前額葉-藍斑迴路</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42362777/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">📈</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>海馬體表徵的精確性預測成年壽命中的增量價值學習</h3>
+  <p class="journal-source">The Journal of neuroscience : the official journal of the Society for Neuroscience &middot; The precision of hippocampal representations predicts incremental value-learning across the adult lifespan.</p>
+  <p>研究表明後海馬體對選項表徵的精確性預測了跨年齡組的價值學習準確度，年齡相關的認知衰退主要源於海馬體與內側前額葉皮質連接的減弱，而非表徵模糊化。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">251名年輕及老年成年人</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">價值學習任務表現</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">後海馬體表徵精度對學習準確度的預測作用及年齡相關連接變化</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">衰老</span><span class="tag">海馬體</span><span class="tag">價值學習</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42362377/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🌾</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產前及產後草甘膦暴露對大鼠神經發育及單胺類標記物的性別依賴性影響</h3>
+  <p class="journal-source">Neurotoxicology</p>
+  <p>草甘膦暴露會在性別依賴的方式下改變大腦多巴胺和血清素等單胺類物質，並導致類似自閉症的行為和神經化學改變，這與環境神經毒性相關。</p>
+  <div class="card-footer">
+    <span class="tag">環境毒理學</span><span class="tag">單胺類物質</span><span class="tag">神經發育</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42349827/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🍼</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>母體分離導致的母乳脂肪酸組成變化與新生兒小鼠腸道微生物組及血清素基因表達的關聯</h3>
+  <p class="journal-source">Molecular biomedicine</p>
+  <p>母體分離會改變母乳脂肪酸組成（如肉豆蔻酸），從而影響新生兒腸道菌群及前額葉皮質中血清素相關基因表達，闡釋了母親壓力對腸腦軸的影響。</p>
+  <div class="card-footer">
+    <span class="tag">腸腦軸</span><span class="tag">早期發展壓力</span><span class="tag">母乳脂肪酸</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42365549/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🩺</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>預扣帶皮層第5層GABA能神經元通過調節興奮/抑制平衡介導慢性疼痛與記憶障礙</h3>
+  <p class="journal-source">The journal of headache and pain</p>
+  <p>研究表明預扣帶皮層第5層GABA能神經元的持續過度興奮會導致皮層E/I平衡失調，進而引發痛覺超敏與記憶缺陷，抑制該通路可緩解症狀。</p>
+  <div class="card-footer">
+    <span class="tag">慢性疼痛</span><span class="tag">GABA能神經元</span><span class="tag">記憶障礙</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42363046/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚡</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>強調經顱隨機噪聲刺激對精神分裂症認知影響的三盲隨機安慰劑對照試驗</h3>
+  <p class="journal-source">Journal of psychiatric research</p>
+  <p>一項針對30名精神分裂症患者的三盲隨機對照試驗顯示，應用於左側背外側前額葉的tRNS在兩週干預後，未顯著改善工作記憶、注意力或臨床症狀。</p>
+  <div class="card-footer">
+    <span class="tag">精神分裂症</span><span class="tag">經顱刺激</span><span class="tag">工作記憶</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42365849/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🌾</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>產前及產後草甘膦暴露對大鼠神經發育及單胺類標記物的性別依賴性影響</h3>
+  <p class="journal-source">Neurotoxicology</p>
+  <p>草甘膦暴露會在性別依賴的方式下改變大腦多巴胺和血清素等單胺類物質，並導致類似自閉症的行為和神經化學改變，這與環境神經毒性相關。</p>
+  <div class="card-footer">
+    <span class="tag">環境毒理學</span><span class="tag">單胺類物質</span><span class="tag">神經發育</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42349801/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚙️</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>精神分裂症患者屍檢腦中前額葉皮質與優勢顳回中原代謝酶的區域性失調</h3>
+  <p class="journal-source">Journal of psychiatric research</p>
+  <p>研究發現精神分裂症患者前額葉皮質中脯氨酸脫氫酶（PRODH）和吡咯烷-5-羧酸還原酶1（PYCR1）表達下降，暗示脯氨酸代謝失調可能導致線粒體功能異常。</p>
+  <div class="card-footer">
+    <span class="tag">精神分裂症</span><span class="tag">代謝</span><span class="tag">線粒體功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42365847/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧪</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>環境鉛暴露與高血壓共存通過mtDNA介導的cGAS相分離加重焦慮與抑鬱</h3>
+  <p class="journal-source">Environmental pollution (Barking, Essex : 1987)</p>
+  <p>鉛和高血壓的聯合暴露會促進前額葉皮層星形膠細胞中mtDNA積累與cGAS相分離，誘發膠細胞衰老，從而導致焦慮和抑鬱樣行為。</p>
+  <div class="card-footer">
+    <span class="tag">環境毒理學</span><span class="tag">cGAS相分離</span><span class="tag">星形膠細胞衰老</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42364866/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🦇</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>皮層與丘腦傳入連接組區分巨猴大腦前扣帶皮質亞區</h3>
+  <p class="journal-source">The Journal of neuroscience : the official journal of the Society for Neuroscience</p>
+  <p>通過逆向追蹤追踪技術，揭示了巨猴前扣帶皮質亞區（如sgACC和pgACC）接收來自前額葉皮質和丘腦的強烈且不同權重的輸入，指導功能調節。</p>
+  <div class="card-footer">
+    <span class="tag">解剖學</span><span class="tag">連接組學</span><span class="tag">前扣帶皮質</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42362380/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💬</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>背內側前額葉皮層活動與自然語言中情境歸因及長度歸咎解釋的關聯</h3>
+  <p class="journal-source">Biological psychology</p>
+  <p>在掃描中對他人負面行為反應更強的dmPFC激活者，在現實生活中會對歸咎行為進行更多情境歸因，並撰寫更長的描述，反映了社會認知的神經基礎。</p>
+  <div class="card-footer">
+    <span class="tag">背內側前額葉皮層</span><span class="tag">歸因理論</span><span class="tag">自然語言處理</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42362009/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧊</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>瀕死核在帕金森病動物模型抑鬱樣行為與短期記憶中的作用</h3>
+  <p class="journal-source">ACS chemical neuroscience</p>
+  <p>Rotenone模型中，中縫核群神經元減少及血清素水平下降，導致前額葉皮質功能障礙，出現抑鬱和短期記憶缺陷。</p>
+  <div class="card-footer">
+    <span class="tag">帕金森病</span><span class="tag">血清素</span><span class="tag">短期記憶</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42348768/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📐</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>學習塑造靈長類前額葉皮質的神經幾何</h3>
+  <p class="journal-source">Nature neuroscience</p>
+  <p>通過學習新規則，恆河猴前額葉皮質的神經表徵從高維、隨機混合的狀態演變為低維、規則選擇性的幾何結構，證明PFC在學習過程中的動態適應。</p>
+  <div class="card-footer">
+    <span class="tag">學習</span><span class="tag">神經幾何</span><span class="tag">神經動力學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42350815/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🤕</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>海馬體結構改變部分介導母體分離對ASD相關行為及癲癇易感性的加劇作用</h3>
+  <p class="journal-source">Journal of molecular histology</p>
+  <p>研究發現母體分離減少了前額葉皮質和海馬體中MeCP2 mRNA表達，且結構改變可能在自閉症樣行為與癲癇易感性之間起調節作用。</p>
+  <div class="card-footer">
+    <span class="tag">自閉症譜系障礙</span><span class="tag">母體分離</span><span class="tag">癲癇</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42350873/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧬</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>三個突觸蛋白基因的突變導致深刻的社會缺陷與皮層功能障礙</h3>
+  <p class="journal-source">Progress in neuro-psychopharmacology &amp; biological psychiatry</p>
+  <p>Syn1/2/3三敲除小鼠顯示社交缺陷，其表現為infralimbic內側前額葉皮層中錐體神經元放電減少且不規則，而不影響海馬體活動。</p>
+  <div class="card-footer">
+    <span class="tag">突觸蛋白</span><span class="tag">社會認知</span><span class="tag">錐體神經元</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42349827/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🤧</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>通過7T MRI檢測的後COVID-19患者嗅覺功能與結構變化</h3>
+  <p class="journal-source">Scientific reports</p>
+  <p>長期嗅覺喪失患者表現出嗅覺網絡（島葉、眶額皮層）連接的特定改變，包括眶額皮層選擇性變薄，為生物標記提供了線索。</p>
+  <div class="card-footer">
+    <span class="tag">COVID-19</span><span class="tag">嗅覺障礙</span><span class="tag">神經影像學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42350777/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>童年期威脅暴露與低情緒覺察預測青少年女性的情緒調節神經相關性</h3>
+  <p class="journal-source">Emotion (Washington, D.C.)</p>
+  <p>研究發現童年期威脅暴露會預測青少年在認知重評時前扣帶迴激活降低，且威脅暴露與低情緒覺察會交互作用，導致杏仁核與腹內側前額葉皮質的連結增強。這表明低情緒覺察可能加劇與威脅相關的神經系統差異，進而影響努力性的情緒調節。</p>
+  <div class="card-footer">
+    <span class="tag">情緒調節</span><span class="tag">發展心理學</span><span class="tag">神經影像</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42347783/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧸</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>執行功能與學齡前兒童對嚴重違規行為的反應：對早期寬恕的影響</h3>
+  <p class="journal-source">Journal of experimental child psychology</p>
+  <p>研究顯示學齡前兒童的執行功能組成成分與其對無道歉嚴重侵犯的反應有不同關聯：高認知彈性與較少選擇和解及較多憤怒抗議（邊界設定）相關，而較佳的獎懲決策能力則與較低的報復慾望相關。這表明幼兒對傷害的反應並非由單一調節能力主導，而是涉及不同的認知機制。</p>
+  <div class="card-footer">
+    <span class="tag">執行功能</span><span class="tag">兒童發展</span><span class="tag">社會行為</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42365804/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🌿</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>葛鱷尾苷通過調節皮層錐體神經元興奮性與突觸傳遞緩解CSDS誘導的抑鬱樣行為</h3>
+  <p class="journal-source">Neuromolecular medicine</p>
+  <p>中藥成分葛鱷尾苷通過激活cAMP-PKA信號通路恢復內側前額葉皮質和vCA1中受抑的錐體神經元活動，從而治療慢性社交挫折誘導的抑鬱症。</p>
+  <div class="card-footer">
+    <span class="tag">抑鬱症</span><span class="tag">中藥藥物</span><span class="tag">突觸傳遞</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42360548/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💊</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>酯酶MGL抑制對疼痛與抑鬱相關行為的可分離外周與中樞機制</h3>
+  <p class="journal-source">Pain</p>
+  <p>研究顯示MGL抑制劑可通過恢復前額葉皮質神經元放電活動來治療慢性神經性疼痛誘發的抑鬱，同時外周機制則負責緩解感覺超敏，支持作為雙重治療策略。</p>
+  <div class="card-footer">
+    <span class="tag">疼痛</span><span class="tag">抑鬱症</span><span class="tag">內源性大麻素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42350317/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔬</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>GMSA：一種基於圖匹配與點雲配準的空間轉錄組數據對齊方法</h3>
+  <p class="journal-source">Journal of computational biology : a journal of computational molecular cell biology</p>
+  <p>提出GMSA框架，結合圖匹配與點雲配準技術，顯著優化了大鼠背外側前額葉皮質等空間轉錄組數據的對齊準確度，解決了複雜變形問題。</p>
+  <div class="card-footer">
+    <span class="tag">空間轉錄組學</span><span class="tag">計算方法</span><span class="tag">技術工具</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42364090/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💊</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>酯酶MGL抑制對疼痛與抑鬱相關行為的可分離外周與中樞機制</h3>
+  <p class="journal-source">Pain</p>
+  <p>研究顯示MGL抑制劑可通過恢復前額葉皮質神經元放電活動來治療慢性神經性疼痛誘發的抑鬱，同時外周機制則負責緩解感覺超敏，支持作為雙重治療策略。</p>
+  <div class="card-footer">
+    <span class="tag">疼痛</span><span class="tag">抑鬱症</span><span class="tag">內源性大麻素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42350317/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧘</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>特質正念與催眠易感性的共同神經機制：面向統一預測編碼框架的範圍性綜述</h3>
+  <p class="journal-source">Brain research bulletin</p>
+  <p>綜述指出正念和催眠易感性均涉及前額葉皮質與 ACC 的激活以及 theta/alpha 波增強，並提出基於預測編碼的統一理論來解釋兩者如何調節自我意識狀態。</p>
+  <div class="card-footer">
+    <span class="tag">正念</span><span class="tag">催眠</span><span class="tag">預測編碼</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42364853/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🎵</span>
+    <span class="utility-low utility-sm">低</span>
+  </div>
+  <h3>基於EEG分析的動態管弦樂分段過渡中腦網絡時間重配置與頻域特徵</h3>
+  <p class="journal-source">PloS one</p>
+  <p>在音樂轉換過程中，前額葉皮層參與資源重新分配，導致網絡效率暫時下降，顯示聽覺結構與大腦振盪活動之間的深度交互。</p>
+  <div class="card-footer">
+    <span class="tag">音樂感知</span><span class="tag">EEG</span><span class="tag">網絡動力學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42348650/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧪</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>妊娠期環境化學物質混合暴露與兒童行為結果的聯合關聯</h3>
+  <p class="journal-source">Environment international</p>
+  <p>研究發現妊娠期環境化學物質混合暴露與學齡前男童的內化問題增加及工作記憶得分較差有顯著關聯，但在女童中未發現此模式。這些發現暗示了環境神經毒性對前額葉相關認知功能存在潛在的性別特異性影響。</p>
+  <div class="card-footer">
+    <span class="tag">環境毒理</span><span class="tag">工作記憶</span><span class="tag">性別差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42365676/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">基礎研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">13</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:85%"></div></div>
+      <span class="topic-count">11</span>
+    </div><div class="topic-row">
+      <span class="topic-name">綜述</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:8%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">發展神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:8%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">發展心理學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:8%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">環境健康與流行病學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:8%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">精神科藥物</span><span class="keyword">恐懼記憶</span><span class="keyword">神經可塑性</span><span class="keyword">阿茲海默症</span><span class="keyword">皮質紋狀體迴路</span><span class="keyword">認知靈活性</span><span class="keyword">計算神經科學</span><span class="keyword">決策制定</span><span class="keyword">前額葉皮質</span><span class="keyword">注意力</span><span class="keyword">去甲腎上腺素</span><span class="keyword">前額葉-藍斑迴路</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：GLM-5-Turbo</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
