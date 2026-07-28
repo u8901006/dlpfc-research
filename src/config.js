@@ -1,10 +1,11 @@
 export const CONFIG = {
-  zhipu: {
-    baseUrl: 'https://open.bigmodel.cn/api/coding/paas/v4',
-    models: ['GLM-5-Turbo', 'GLM-4.7', 'GLM-4.7-Flash'],
-    maxTokens: 100000,
+  nvidia: {
+    baseUrl: 'https://integrate.api.nvidia.com/v1',
+    models: ['nvidia/nemotron-3-super-120b-a12b', 'nvidia/nemotron-3-nano-30b-a3b'],
+    maxTokens: 16384,
     timeout: 660000,
-    temperature: 0.7,
+    temperature: 1.0,
+    topP: 0.95,
   },
   pubmed: {
     baseUrl: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils',

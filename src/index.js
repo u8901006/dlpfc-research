@@ -40,9 +40,9 @@ async function main() {
   console.log('=== DLPFC Research Daily Update ===');
   console.log(`Date: ${getToday()}`);
 
-  const apiKey = process.env.ZHIPU_API_KEY;
+  const apiKey = process.env.NVIDIA_API_KEY;
   if (!apiKey) {
-    console.error('ERROR: ZHIPU_API_KEY environment variable is required');
+    console.error('ERROR: NVIDIA_API_KEY environment variable is required');
     process.exit(1);
   }
 

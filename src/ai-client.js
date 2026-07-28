@@ -51,8 +51,8 @@ function repairJson(raw) {
   return null;
 }
 
-async function callZhipuAPI(apiKey, model, messages, maxTokens, timeout) {
-  const url = `${CONFIG.zhipu.baseUrl}/chat/completions`;
+async function callNvidiaAPI(apiKey, model, messages, maxTokens, timeout) {
+  const url = `${CONFIG.nvidia.baseUrl}/chat/completions`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeout);
 
@@ -67,7 +67,10 @@ async function callZhipuAPI(apiKey, model, messages, maxTokens, timeout) {
         model,
         messages,
         max_tokens: maxTokens,
-        temperature: CONFIG.zhipu.temperature,
+        temperature: CONFIG.nvidia.temperature,
+        top_p: CONFIG.nvidia.topP,
+        stream: false,
+        chat_template_kwargs: { enable_thinking: false },
       }),
       signal: controller.signal,
     });
@@ -88,15 +91,15 @@ async function callZhipuAPI(apiKey, model, messages, maxTokens, timeout) {
 
 async function callWithFallback(apiKey, messages) {
   const errors = [];
-  for (const model of CONFIG.zhipu.models) {
+  for (const model of CONFIG.nvidia.models) {
     try {
       console.log(`  [AI] Trying model: ${model}...`);
-      const content = await callZhipuAPI(
+      const content = await callNvidiaAPI(
         apiKey,
         model,
         messages,
-        CONFIG.zhipu.maxTokens,
-        CONFIG.zhipu.timeout
+        CONFIG.nvidia.maxTokens,
+        CONFIG.nvidia.timeout
       );
       console.log(`  [AI] ${model} succeeded (${content.length} chars)`);
       return { content, model };
@@ -246,6 +249,6 @@ export async function analyzeArticles(articles, apiKey) {
     articles: allResults,
     keywords,
     topic_distribution: topicDist,
-    model: CONFIG.zhipu.models[0],
+    model: CONFIG.nvidia.models[0],
   };
 }

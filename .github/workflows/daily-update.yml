@@ -33,7 +33,7 @@ jobs:
 
       - name: Run daily update
         env:
-          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           GH_PAGES_DIR: ${{ github.workspace }}/gh-pages
           OUTPUT_DIR: ${{ github.workspace }}/output
         run: node src/index.js

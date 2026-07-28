@@ -234,7 +234,7 @@ export function generateDailyPage(date, analysis) {
       <div class="header-meta">
         <span class="badge badge-date">📅 ${formatDateDisplay(date)}</span>
         <span class="badge badge-count">📊 ${articles.length} 篇文獻</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
       </div>
     </div>
   </header>
@@ -252,7 +252,7 @@ export function generateDailyPage(date, analysis) {
   ${renderFooterLinks()}
 
   <footer>
-    <span>資料來源：PubMed &middot; 分析模型：${escapeHtml(analysis.model || 'Zhipu AI')}</span>
+    <span>資料來源：PubMed &middot; 分析模型：${escapeHtml(analysis.model || 'NVIDIA AI')}</span>
     <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
   </footer>
 </div>
@@ -308,7 +308,7 @@ export function generateIndexPage(reports) {
     </div>
   </div>
   <footer>
-    <p>Powered by PubMed + Zhipu AI · <a href="https://github.com/u8901006/dlpfc-research">GitHub</a></p>
+    <p>Powered by PubMed + NVIDIA AI · <a href="https://github.com/u8901006/dlpfc-research">GitHub</a></p>
   </footer>
 </div>
 </body>
