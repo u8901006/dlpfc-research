@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年7月30日</title>
+<meta name="description" content="2026年7月30日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年7月30日（週四）</span>
+        <span class="badge badge-count">📊 30 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 30 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>可卡因劫持mPFC中Npas4依賴性生長抑素神經元群體以調節注意力</h3>
+  <p class="journal-source">Neuroscience bulletin &middot; Cocaine Hijacks the Npas4-dependent Somatostatin Ensembles in the mPFC to Mediate Attention</p>
+  <p>研究發現單次可卡因注射會增加小鼠mPFC中Npas4轉錄依賴性神經元群體（N-RAM）及其與生長抑素互通神經元（N-RAM+ SST-IN）的共同激活，此機制促進來自中背丘的興奮性突觸輸入。抑制這些神經元群體會損害5選擇序列反應時間任務中的注意力表現，揭示其在可卡因導致注意缺陷中的關鍵角色。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">小鼠（雄性）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">單次可卡因注射</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組（生理鹽水）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">注意力表現（5-CSRTT）、神經元群體激活（N-RAM+/N-RAM+ SST-IN）、mPFC突觸可塑性</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">可卡因</span><span class="tag">注意力</span><span class="tag">Npas4</span><span class="tag">生長抑素神經元</span><span class="tag">mPFC</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42501223/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">⚡</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>GluN2A啟用去甲腎上腺素對前額葉振盪與認知彈性的調控</h3>
+  <p class="journal-source">eNeuro &middot; GluN2A Enables Noradrenergic Control of Prefrontal Oscillations and Cognitive Flexibility</p>
+  <p>研究證明GluN2A含NMDA受體對於藍斑（LC）到mPFC的去甲腎上腺素輸入調節網絡振盪（尤其gamma頻段）及反轉學習是必要的。GluN2A缺失會導致振盪反應消失，並伴隨前調皮質中LC軸突密度增加與去甲腎上腺素轉運蛋白上調，提示發育性補償機制。此結果支持α2-腎上腺素受體路徑為改善前額葉網絡協調的治療標的。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雄性小鼠（野生型、雜合型及Grin2a全基因敲除）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">LC→mPFC投射的選擇性遺傳激發或抑制</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">野生型對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">反轉學習表現、mPFC片段中的gamma/high-frequency振盪、LC軸突密度、NET表達</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">GluN2A</span><span class="tag">去甲腎上腺素</span><span class="tag">認知彈性</span><span class="tag">gamma振盪</span><span class="tag">LC-mPFC迴路</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42498666/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🧠💧</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>前額葉-杏仁核電路的計算建模將功能連通性改變與重度抑鬱症的電路機制連結</h3>
+  <p class="journal-source">Journal of computational neuroscience &middot; Computational modeling of prefrontal-amygdala circuits links functional connectivity alterations to circuit-level mechanisms in major depression</p>
+  <p>利用改良的Jansen-Rit神經質量模型結合靜態fMRI功能連通性數據，研究模擬了前額葉-杏仁核電路在健康與抑鬱狀態下的動態。結果顯示，在健康狀態下杏仁核透過底向調節維持穩定並支持情緒調節；而在抑鬱狀態下，杏仁核過度激活會抑制腹內側前額葉並激活前扣帶皮質前部，導致認知調節與情緒失衡的異常電路狀態。此模型提供了一種機制性框架來理解功能連通性改變如何導致抑鬱症狀。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">健康與重度抑鬱症患者的靜態fMRI數據</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">以個體功能連通性為輸入的生物物理電路模擬</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">健康對照組的模擬基線</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">電路狀態（正常vs異常）、腹內側PFC抑制、前扣帶皮質前部激活、情緒調節失衡</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">前額葉-杏仁核</span><span class="tag">重度抑鬱症</span><span class="tag">計算建模</span><span class="tag">功能連通性</span><span class="tag">Jansen-Rit模型</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42489759/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">🧒</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>伊拉克學前兒童家長報告的24小時運動行為與執行功能之關聯</h3>
+  <p class="journal-source">Journal of physical activity &amp; health &middot; Parent-Reported 24-Hour Movement Behaviors Movement Behaviors for Preschool Children: Evidence From Iraq</p>
+  <p>在伊拉克學前兒童（4-6歲）中，家長報告的中等至劇烈身體活動（MVPA）與睡眠時長與執行功能（經Head-Toes-Knees-Shoulders Revised任務測量）顯著正相關，而久坐行為與休閒螢幕時間則顯著負相關。組成數據分析進一步證實，相對於其他行為的MVPA比例以及相對於清醒時的睡眠比例，是預測更佳執行功能的獨立因子。此結果強調了在早期兒童發展中，平衡的24小時行為模式對執行功能的重要性。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">伊拉克薩瑪拉的學前兒童（4-6歲，n=210）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">家長報告的24小時行為（MVPA、睡眠、久坐、螢幕時間）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無明確對照組（橫斷面相關設計）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">Head-Toes-Knees-Shoulders Revised任務分數（執行功能指標）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">執行功能</span><span class="tag">身體活動</span><span class="tag">睡眠</span><span class="tag">螢幕時間</span><span class="tag">學前兒童</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526856/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">📉</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>中風後抑鬱患者不同頻帶下腦區間中心性的頻率依賴性改變：靜態fMRI研究</h3>
+  <p class="journal-source">Neuroreport &middot; Frequency-dependent alterations of degree centrality in patients with poststroke depression: a resting-state functional MRI study</p>
+  <p>中風後抑鬱（PSD）患者在右側背外側前額葉皮質（DLPFC）於傳統、slow-4及slow-5頻帶均表現出持續降低的度中心性；而在slow-4頻帶中，左側DLPFC度中心性降低與自評抑鬱量表分數負相關，而左側蒼白球度中心性升高則與抑鬱嚴重程度正相關。此外，PSD組在slow-4帶中左側顳葉中迴、梭狀迴及胼胝體顯著增加度中心性。結果顯示slow-4帶為PSD中功能連通性異常最顯著的頻帶，提供了頻率特異性的神經生物標的。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">急性腦梗死患者（n=84，其中PSD組n=35，非PSD組n=49）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">非PSD中風患者對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">各頻帶（傳統、slow-4, slow-5）下腦區的度中心性值；與自我評分抑鬱量表（SDS）的相關</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">中風後抑鬱</span><span class="tag">度中心性</span><span class="tag">slow-4頻帶</span><span class="tag">DLPFC</span><span class="tag">靜態fMRI</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42485114/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Effect of database, pre-processing pipeline, and scan duration on rs-fMRI functional connectivity based treatment targets for TMS obtained using the Stanford Neuromodulation Therapy (SNT) protocol.</h3>
+  <p class="journal-source">Psychoradiology</p>
+  <p>BACKGROUND: Transcranial Magnetic Stimulation targeting the dorsolateral prefrontal cortex (DLPFC) is a therapeutic approach for treating depressive disorder. However, traditional anatomical methods o...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42529453/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Connectome-guided personalization of optimal tDCS intervention selection in Alzheimer&#039;s disease: A modeling study.</h3>
+  <p class="journal-source">eNeuro</p>
+  <p>Transcranial direct current stimulation (tDCS) could reduce the neurophysiological effects in Alzheimer&#039;s disease (AD), but progress is hampered by variable outcomes across studies, likely related to ...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42527300/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Multivariate Brain Representations of the Traumatic Memory in PTSD: Changes Across Exposure Sessions and Impact of Dopaminergic Manipulation.</h3>
+  <p class="journal-source">Biological psychiatry. Cognitive neuroscience and neuroimaging</p>
+  <p>BACKGROUND: Understanding how exposure-based trauma treatment modifies neural representations of trauma memory may lead to optimized and targeted interventions for posttraumatic stress disorder. Altho...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526801/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Amygdala Functional Hyperconnectivity: A Multiple Symptom Subdomain Marker of the Bipolar Risk to Disorder Spectrum.</h3>
+  <p class="journal-source">Biological psychiatry. Cognitive neuroscience and neuroimaging</p>
+  <p>BACKGROUND: Identifying reproducible neural markers of bipolar disorder(BD) risk is critical for early detection and differentiation from unipolar/major depression. We previously demonstrated that int...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526799/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Effects of Personalized Transcranial Magnetic Stimulation on Social Cognitive Network Functional Connectivity in Schizophrenia Spectrum Disorders: A Double-Blind, Randomized, Sham-Controlled Target Engagement Trial.</h3>
+  <p class="journal-source">Brain stimulation</p>
+  <p>BACKGROUND: Schizophrenia spectrum disorders (SSDs) often feature debilitating social cognitive impairments, with limited treatment options. This study used a target engagement approach to examine the...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526755/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Neural Correlates of Menopausal Symptoms Revealed by Emotion-Related fNIRS Activity.</h3>
+  <p class="journal-source">NeuroImage</p>
+  <p>OBJECTIVE: Menopausal symptoms had a continuous impact on women&#039;s well-being, with mood disturbances representing a core manifestation. To further support treatment decisions, objective neurophysiolog...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526697/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Multi-Frequency EEG Connectomics Uncovers Insula-Network Subtypes in Somatic Symptom Disorder.</h3>
+  <p class="journal-source">Biological psychiatry</p>
+  <p>BACKGROUND: Somatic symptom disorder (SSD) exhibits substantial clinical heterogeneity that limits treatment efficacy, with over 40% of patients failing to respond to standard interventions. Here, we ...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526677/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Sumoylation profiles and mitochondrial dynamics in in vivo and in vitro models of Parkinson&#039;s disease.</h3>
+  <p class="journal-source">Neuroscience letters</p>
+  <p>Parkinson&#039;s disease (PD) is characterized by progressive dopaminergic neuron loss and motor and non-motor impairments. Mitochondrial dysfunction and altered post-translational modifications, including...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42526623/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Insular routing to orbitofrontal cortex enables breathing awareness.</h3>
+  <p class="journal-source">Science advances</p>
+  <p>How does the human brain detect and respond to disruptions in breathing? While animal studies have advanced our understanding of respiratory control, breathing distress in humans remains difficult to ...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42525758/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Multiplexing of functionally distinct inputs by intrinsic modulation of spike timing in a monoaminergic nucleus.</h3>
+  <p class="journal-source">Cell reports</p>
+  <p>Monoaminergic nuclei such as the serotonergic dorsal raphe nucleus (DRN) receive functionally distinct streams of synaptic inputs, yet whether and how these are transformed into distinct population co...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42525535/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Genome-wide identification of differentially methylated regions in prefrontal cortex of suicide completers in an Indian ancestral admixture population.</h3>
+  <p class="journal-source">The world journal of biological psychiatry : the official journal of the World Federation of Societies of Biological Psychiatry</p>
+  <p>OBJECTIVES: Suicide is a complex phenotype influenced by genetic, environmental, and psychosocial determinants. Epigenetic mechanisms, particularly DNA methylation, play a critical role in mediating t...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42525506/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>The social life of Pavlovian learning.</h3>
+  <p class="journal-source">Cognitive, affective &amp; behavioral neuroscience</p>
+  <p>This article proposes that Pavlovian learning contributes to the formation and stabilization of social beliefs and collective commitments. We argue that associative processes linking reward and threat...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42521946/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Dimensional effect profiles in treatment-resistant depression: A naturalistic, prospective head-to-head comparison of arTMS, esketamine nasal spray, and oral brexpiprazole.</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>INTRODUCTION: Treatment-resistant depression (TRD) is a heterogeneous condition in which symptoms such as anhedonia, rumination, and anxiety contribute to persistent disability. Esketamine nasal spray...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42521097/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Functional connectivity of the medial prefrontal cortex and posterior cingulate cortex mediates the association between expressive suppression and rumination in depressed adolescents.</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>BACKGROUND: Expressive suppression is associated with rumination, but the cortical functional connectivity (FC) patterns characterizing this relationship remain unclear in adolescents with major depre...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42521091/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Divergent Neurobehavioral Effects of Hydroxychloroquine and Leflunomide in a Rat Model of Rheumatoid Arthritis.</h3>
+  <p class="journal-source">Neuropharmacology</p>
+  <p>BACKGROUND: Rheumatoid arthritis (RA) is often associated with neuropsychiatric comorbidities; yet, little is known about the central neurobehavioral fingerprints of disease-modifying antirheumatic me...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42520888/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Distinct resting-state but comparable emotion-evoked prefrontal function between coal miners and university students: evidence from portable fNIRS.</h3>
+  <p class="journal-source">Ergonomics</p>
+  <p>Whether neuroimaging findings from university student samples generalise to occupational populations has rarely been tested. Using portable functional near-infrared spectroscopy (fNIRS), we compared p...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42518290/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Long- term administration of low doses of psilocybin causes epigenetic changes in the rat medial prefrontal cortex.</h3>
+  <p class="journal-source">Psychopharmacology</p>
+  <p>RATIONALE: Psilocybin (PSI) microdosing, defined as a repeated administration of sub-perceptual doses, has gained increasing attention as a potential therapeutic strategy for affective and anxiety dis...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42517891/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>EEG-guided transcranial magnetic stimulation shows correlative reduction in core restrictive and repetitive behavioral symptoms for children and adolescents with autism spectrum disorder: A systematic review.</h3>
+  <p class="journal-source">Applied neuropsychology. Child</p>
+  <p>This exploratory study investigates the effectiveness of EEG-guided Transcranial Magnetic Stimulation (TMS) in treating children with Autism Spectrum Disorder (ASD). ASD is a neurodevelopmental disord...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42517775/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Olfactory bulbectomy induces early allodynia and region-dependent astrocytic and microglial remodeling in female rats.</h3>
+  <p class="journal-source">Neuroscience</p>
+  <p>Major depressive disorder (MDD) frequently coexists with chronic pain in women. Olfactory bulbectomy (OBX) is a validated animal model of depression. In male rodents, OBX induces allodynia and glial a...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42508527/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>LINE-1 CpG methylation in canine blood and cortical DNA tracks epigenetic changes with age.</h3>
+  <p class="journal-source">GeroScience</p>
+  <p>Aging is accompanied by progressive epigenetic alterations, including changes in DNA methylation affecting both gene-associated regions and repetitive elements such as LINE-1 retrotransposons. Reduced...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42503570/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Intra-locus coeruleus LPS administration induces anxiety-like behavior, thermal hyperalgesia, and striatal lysosomal alterations: Relevance to Parkinson&#039;s disease.</h3>
+  <p class="journal-source">Neuroscience letters</p>
+  <p>According to Braak&#039;s staging hypothesis, Parkinson&#039;s disease (PD) pathology may originate in extranigral regions, including the locus coeruleus (LC). In parallel, PD has been associated with lysosomal...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42503345/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Diazepam, a positive allosteric modulator of the GABA(A) receptor, induces strain-specific responses in object recognition, ultrasonic vocalizations and monoaminergic profiles in the Wistar Kyoto rat model of endogenous depression.</h3>
+  <p class="journal-source">Neuroscience letters</p>
+  <p>Major depressive disorder (MDD) involves cognitive impairment, altered affective states and dysregulation of neurotransmitter homeostasis. The Wistar Kyoto (WKY) rat is characterized by inherent depre...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42501815/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Effects of early postnatal dopamine transporter (DAT) inhibition on social and cognitive behavior in a rat model of autism.</h3>
+  <p class="journal-source">Behavioural brain research</p>
+  <p>Autism spectrum disorder (ASD) is a neurodevelopmental condition characterized by deficits in social behavior and cognition. Increasing evidence suggests that alterations in dopaminergic neurotransmis...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42501761/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Sex-specific contribution of endothelial AT1aRs to avoidance behaviors and BBB changes in a mouse model of PTSD.</h3>
+  <p class="journal-source">Neurobiology of disease</p>
+  <p>Posttraumatic stress disorder (PTSD) affects more than 9% of the population, and currently FDA-approved treatments show limited efficacy. There is therefore an urgent need to better understand the und...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42501759/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📄</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>Acute Stress Drives Adaptive Anxiety via Excitatory-Inhibitory Imbalance in the Prefrontal-Amygdala Circuit in Male Mice.</h3>
+  <p class="journal-source">Neuroscience bulletin</p>
+  <p>Acute stress rapidly reshapes brain function to promote adaptive behavioral responses. Although dysfunction of the medial prefrontal cortex (mPFC)-amygdala circuit is well established in chronic stres...</p>
+  <div class="card-footer">
+    <span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42501227/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">General</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">25</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經藥物學 / 認知神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:4%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">分子神經科學 / 精神病學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:4%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">計算神經科學 / 精神病學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:4%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">兒童發展心理学 / 行為醫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:4%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床神經科學 / 精神病學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:4%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">前額葉</span><span class="keyword">可卡因</span><span class="keyword">注意力</span><span class="keyword">Npas4</span><span class="keyword">生長抑素神經元</span><span class="keyword">mPFC</span><span class="keyword">GluN2A</span><span class="keyword">去甲腎上腺素</span><span class="keyword">認知彈性</span><span class="keyword">gamma振盪</span><span class="keyword">LC-mPFC迴路</span><span class="keyword">前額葉-杏仁核</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
