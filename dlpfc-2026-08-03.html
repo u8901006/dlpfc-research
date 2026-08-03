@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年8月3日</title>
+<meta name="description" content="2026年8月3日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月3日（週一）</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 10 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>探討老年人認知負荷與相對神經效率：來自 fNIRS 與 SLUMS 評估的初步見解</h3>
+  <p class="journal-source">Delaware journal of public health &middot; Exploring Cognitive Load and Relative Neural Efficiency in Aging: : Preliminary Insights from fNIRS and the SLUMS Assessment.</p>
+  <p>研究發現，老年人在進行 SLUMS 認知評估時，痴呆組織的相對神經效率（RNE）顯著低於正常認知組，顯示痴呆者在相同任務下需付出更多認知努力。fNIRS 測量的前額葉血氧變化可作為早期認知障礙的生理標誌。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">65-85歲社區長者（NOR, MCD, DEM 各組）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">佩戴 fNIRS 感測器進行 SLUMS 評估</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同認知狀態組間比較</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">相對神經效率（RNE）與血氧指標（ΔHbO, ΔHbR）的群組差異</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">認知老化</span><span class="tag">fNIRS</span><span class="tag">神經效率</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42544332/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">⚖️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>接近與迴避動機的共同與獨立神經基質</h3>
+  <p class="journal-source">The Journal of neuroscience : the official journal of the Society for Neuroscience &middot; Common and distinct neural substrates for approach- and avoidance-motivated actions.</p>
+  <p>fMRI 研究發現，接收獎金（接近動機）時內側前額葉皮質較活躍，預期損失（迴避動機）時背內側前額葉皮質較活躍，顯示前額葉對動機價值有別表徵。底盤多巴胺系統部分整合這些訊號以影響運動輸出。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">29 名健康成年人</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">準備-開始-去任務中獲得金錢或面臨損失</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">接近 vs 迴避動機條件</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">前額葉、底盤VM及運動皮質的激活模式與肌力/反應時間關聯</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">動機神經科學</span><span class="tag">前額葉功能</span><span class="tag">fMRI</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42532842/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🎮</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>嚴肎遊戲環境中基本生命支持技能學習與遷移期間的前額腦活動評估</h3>
+  <p class="journal-source">PloS one &middot; Frontal brain activity assessment during basic life support skill acquisition and transfer in serious game based learning environments.</p>
+  <p>雖然講授、平板與VR三種BLS訓練方式在實操考試成績相當，但VR組在測試時顯示前額葉激活較低， suggering 更高效的認知資源利用，顯示沉浸式訓練可能提升神經效率。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">51 名參與者，隨機分至講授、平板、VR 三組</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">不同BLS訓練方式（講授/平板VR/VR）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">訓練方式間的前額葉激活與實操表現</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">fNIRS測量的前額葉HbO2變化與實操考試成績</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">VR訓練</span><span class="tag">fNIRS</span><span class="tag">技能遷移</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42536622/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">💪</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>激勵教練提示可調節頂級足球運動員在高強度間歇訓練中的前額葉皮質活動與知覺反應：隨機交叉 fNIRS 研究</h3>
+  <p class="journal-source">European journal of sport science &middot; Motivational Coaching Cues Can Modulate Prefrontal Cortex Activity and Perceptual Responses of Elite Football Players During High-Intensity Interval Training: A Randomised Crossover fNIRS Study.</p>
+  <p>在高強度間歇訓練中，激勵提示可降低主觀疲勞（RPE）並減少眶 frontal 極前額葉的HbO2濃度， suggering 在相同身體負荷下提升神經效率。此效應在訓練後期較顯著。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">22 名男性頂級足球運動員</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">有無激勵教練提示的HIIT訓練</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">有激勵 vs 無激勵條件</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">前額葉HbO2、主觀疲勞（RPE）、動機與情緒評分</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">運動神經科學</span><span class="tag">fNIRS</span><span class="tag">動機調節</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42533283/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>催产素誘導的動態腦連通模式：fMRI共活化模式分析研究</h3>
+  <p class="journal-source">Molecular psychiatry &middot; Dynamic brain connectivity patterns induced by oxytocin: An fMRI Co-Activation pattern analysis study.</p>
+  <p>單次鼻腔給予催产素可顯著改變動態腦狀態的時間特性，增強網絡靈活性與穩定性，特別是在年長者中與認知表現相關。結果顯示催素通過調節杏仁核、內前額葉皮質與顯著網絡的連通性，促進情緒調節與社會認知的年齡特異性功能。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">健康年輕（18-31歲）和老年（63-81歲）成人</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">單次鼻腔給予催产素</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">安慰劑</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">腦狀態的動態特性（頻率、進入度、離開度）、網絡靈活性、認知表現（數字符號替換測驗）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">催产素</span><span class="tag">動態連通性</span><span class="tag">年齡差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41876708/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔬</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>NicheDeSig：空間轉錄組學的生態位感知去卷積與自適應簽名分析</h3>
+  <p class="journal-source">Bioinformatics (Oxford, England)</p>
+  <p>提出 NicheDeSig 方法，利用自適應基因簽名考慮空間微環境影響，改善空間轉錄組學的細胞類型去卷積精準度。在人類背外側前額葉皮質中成功復原層狀與白質相關基因表達程式。</p>
+  <div class="card-footer">
+    <span class="tag">空間轉錄組</span><span class="tag">生物資訊學</span><span class="tag">前額葉皮質</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42530368/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🏃</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>運動密度影響運動後抑制控制益處的表達：來自低容量間歇運動方案的證據</h3>
+  <p class="journal-source">Restorative neurology and neuroscience</p>
+  <p>低密度間歇運動（1分鐘運動＋2分鐘休息）顯著改善抑制控制（經反眼跳任務測量），而高密度則無此效果。結果顯示運動與休息的比例是運動認知益處的關鍵調節因子，提醒運動處方需考慮時間結構而非僅總量。</p>
+  <div class="card-footer">
+    <span class="tag">運動密度</span><span class="tag">抑制控制</span><span class="tag">間歇訓練</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42536617/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠🚶</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>純認知訓練對老年人步態和平衡的影響：系統性文獻回顧與Meta分析</h3>
+  <p class="journal-source">JMIR aging</p>
+  <p>純認知訓練顯著改善雙任務步態速度（標準化平均差異0.39），但對單任務步態、平衡或功能性移動無顯著影響。結果支持認知訓練特別提升認知-運動整合能力，建議以執行功能為導向的課程（每週2-3次，8-10週）作為幹預策略。</p>
+  <div class="card-footer">
+    <span class="tag">認知訓練</span><span class="tag">雙任務步態</span><span class="tag">老年人</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42525971/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💪</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>肌肉線粒體氧化能力與長達十年的認知衰退：性別差異</h3>
+  <p class="journal-source">Aging cell</p>
+  <p>較高的肌肉線粒體氧化能力（經磷胍酸復原率kPCr測量）與較慢的認知衰退相關，但此關係在男性中更為顯著，特別是在執行功能與處理速度領域。男性的關聯通過空腹血糖與HbA1c介導，女性則經紅血球相關途徑，提示性別特異的生理路徑。</p>
+  <div class="card-footer">
+    <span class="tag">線粒體</span><span class="tag">認知衰退</span><span class="tag">性別差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42479929/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">❤️‍🩹</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>連接心肺適能與認知的炎症、代謝與血管途徑：IGNITE研究結果</h3>
+  <p class="journal-source">Brain, behavior, &amp; immunity - health</p>
+  <p>心肺適能（CRF）與認知功能的關聯部分由低度發炎（IL-6）與胰島素抵抗（HOMA-IR）介導，尤其是對執行功能、處理速度與記憶域具有影響。動脈僵硬度（cfPWV）則未顯示介導作用，提示CRF對認知的保護主要經由代謝與發炎途徑而非血管路徑。</p>
+  <div class="card-footer">
+    <span class="tag">心肺適能</span><span class="tag">炎症</span><span class="tag">認知</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42395032/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">基礎神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">教育神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">運動醫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經調節</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">運動神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">認知康復</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">代謝腦健康</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">運動與認知</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">認知老化</span><span class="keyword">fNIRS</span><span class="keyword">神經效率</span><span class="keyword">動機神經科學</span><span class="keyword">前額葉功能</span><span class="keyword">fMRI</span><span class="keyword">VR訓練</span><span class="keyword">技能遷移</span><span class="keyword">運動神經科學</span><span class="keyword">動機調節</span><span class="keyword">空間轉錄組</span><span class="keyword">生物資訊學</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
