@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年8月6日</title>
+<meta name="description" content="2026年8月6日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月6日（週四）</span>
+        <span class="badge badge-count">📊 11 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 11 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>經顱聚焦超聲增強人類目標自願運動信號的識別力</h3>
+  <p class="journal-source">IEEE transactions on neural systems and rehabilitation engineering : a publication of the IEEE Engineering in Medicine and Biology Society &middot; Transcranial focused ultrasound enhances the discriminative power of targeted voluntary motor signals in humans.</p>
+  <p>該研究發現，針對左運動皮質的經顱聚焦超聲（tFUS）可顯著增強運動相關皮質電位（MRCP）幅度及手掌握訊號在腦機介面（BCI）中的識別度，與空間假象或非調制條件相比效果顯著。脈衝重複頻率或 Duty Cycle 無影響，證實 tFUS 可選擇性增強自願運動皮質訊號。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">18 名健康人類參與者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">左運動皮質或右前額葉皮質針對性 tFUS（30/3000 Hz PRF，30/60% duty cycle）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">空間假象與非調制基線條件</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">MRCP 振幅與手掌握訊號在 BCI 分類中的識別度提升</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">經顱聚焦超聲</span><span class="tag">腦機介面</span><span class="tag">運動皮質</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42555310/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">⚖️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>慢性高血壓與社會隔離以性別依賴方式破壞血腦屏障並損害記憶功能</h3>
+  <p class="journal-source">Neurobiology of disease &middot; Chronic hypertension and social isolation disrupt the blood-brain barrier and memory in a sex-dependent manner.</p>
+  <p>研究顯示，慢性高血壓結合社會隔離會導致雄性大鼠長期記憶受損（與海馬 BBB 通透性增加相關），而雌性大鼠則僅在空間工作記憶上受損（與前額葉皮質 BBB 破壞及氧化應激標誌物 8-isoprostane 增加相關），提示記憶功能受損具性別特異性與區域特異性。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雄雌成年 Wistar 與 spontaneously hypertensive 大鼠 (SHR)</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">慢性高血壓下單獨飼養 3 個月（社會隔離） vs. 群體飼養＋常規操作</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">社會化對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">長期記憶（物體辨識）與空間工作記憶（連續 Y 迷宮）、前額葉皮質及海馬 BBB 通透性、8-isoprostane 水平</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">慢性高血壓</span><span class="tag">社會隔離</span><span class="tag">血腦屏障</span><span class="tag">性別差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42551659/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🔬</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>肌萎縮性側索硬化症中語言與執行功能衰退的不同細胞表型</h3>
+  <p class="journal-source">Cell &middot; Distinct cellular phenotypes of language and executive decline in amyotrophic lateral sclerosis.</p>
+  <p>透過空間與單核轉錄體分析，研究揭示 ALS 中執行功能障礙與深層 dorsolateral 前額葉皮質neuron 粒線體與突觸活性減少相關，而語言缺陷則與廣泛的神經血管異常及胶質血管失調相關，提示認知異質性來源於區域特異性細胞表型。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">經認知分層的 ALS 患者前額葉皮質樣本</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">空間與單核轉錄體整合分析</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">認知正常對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">執行功能衰退與深層 dorsolateral PFC 粒線體/突觸活性降低；語言缺陷與 diffuse pan-regional 神經血管異常相關</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">ALS</span><span class="tag">前額葉皮質</span><span class="tag">執行功能</span><span class="tag">語言</span><span class="tag">細胞表型</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42551425/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">🧬</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>前額葉皮質中自閉症特異的剪接體轉錄組特徵，相較於雙極症</h3>
+  <p class="journal-source">Trends in psychiatry and psychotherapy &middot; Autism-specific spliceosomal transcriptomic signatures in prefrontal cortex contrasted with bipolar disorder.</p>
+  <p>比較後屍前額葉皮質 RNA-seq 發現，ASD 與 45 個差異表達基因相關（主要為非編碼 RNA 下調），富集於剪接體組裝與活性；而 BD 則有 12 個候選基因（多為蛋白質編碼上調），富集於金屬離子反應、血管調節與神經炎症通路，兩組無共享基因或功能項目，支持前額葉皮質分子機制的明顯分歧。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">ASD 與 BD 患者及對照組的後屍前額葉皮質樣本</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">RNA-seq + DESeq2 差異表達分析</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">對照組前額葉皮質</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">ASD：45 個 DEGs（非編碼 RNA 下調，剪接體富集）；BD：12 個 DEGs（蛋白質編碼上調，金屬離子/血管/炎症通路富集）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">自閉症譜系障礙</span><span class="tag">雙極症</span><span class="tag">剪接體</span><span class="tag">前額葉皮質</span><span class="tag">轉錄組</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42550007/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">⚙️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>內顱投射神經元在 medial 前額葉皮質中介導目標導向行為的學習</h3>
+  <p class="journal-source">Cell reports &middot; Intratelencephalic neurons in the medial prefrontal cortex mediate the acquisition of goal-directed actions.</p>
+  <p>該研究利用 Cre 小鼠系統識別 mPFC 投射至背外側後部紋狀體的 intratelencephalic (IT) 神經元，發現化學遺傳抑制 IT（但非 PT）神經元會損害目標導向學習。訓練誘導的 pERK 訊號在深層 IT 神經元中較持續，並伴隨突觸輸入從抑制性轉為興奮性，支持 IT 神經元在目標導向行為中的可塑性角色。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">Cre 驅動小鼠系統中的 mPFC 神經元</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">化學遺傳抑制 mPFC IT 神經元</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">PT 神經元抑制或無抑制對照</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">目標導向學習表現；pERK 訊號動態；突觸輸入類型轉變（抑制→興奮）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">內顱投射神經元</span><span class="tag">目標導向學習</span><span class="tag">mPFC</span><span class="tag">化學遺傳調控</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42545851/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚠️</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>長期使用抗生素透過氧化應力與凋亡通路惡化由 aflatoxin B(1) 和 diethylnitrosamine 引起的皮質-海馬損傷</h3>
+  <p class="journal-source">Toxicon : official journal of the International Society on Toxinology</p>
+  <p>研究發現長期使用抗生素會加劇 AFB1 和 DEN 所導致的前額葉皮質與海馬體氧化應力、神經發炎與神經細胞凋亡，進而損害記憶與學習能力，增加焦慮行為，提示腸道失調可能是神經毒性的重要中介。</p>
+  <div class="card-footer">
+    <span class="tag">神經毒性</span><span class="tag">腸腦軸</span><span class="tag">氧化應力</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41997305/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>星形膠質細胞-derived apelin 調節前額葉皮質神經元活性並預防焦慮様行為</h3>
+  <p class="journal-source">Acta pharmacologica Sinica</p>
+  <p>研究證明 medial 前額葉皮質中星形膠質細胞缺乏 apelin 會導致神經元樹突異常與焦慮様行為，而補充 apelin 能逆轉此些缺損，即使在慢性約束壓力下也有效，提示 apelin 為調節精神功能的潛在治療標的。</p>
+  <div class="card-footer">
+    <span class="tag">apelin</span><span class="tag">星形膠質細胞</span><span class="tag">焦慮</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41963639/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>海洛因戒斷者在社會問題解決中的社會認知缺陷與多腦動態異常：fNIRS 超掃描研究</h3>
+  <p class="journal-source">Biological psychiatry</p>
+  <p>海洛因使用障礙者在群體問題解決任務中表現出視角接受能力下降、問題解決效能不佳，fNIRS 顯示右下額迴與左眼眶前皮質活化減少，右 dorsolateral 前額葉皮質功能連結弱化，導致人際神經同步（INS）中斷，這些缺陷與戒斷期間的情感與睡眠問題共病。</p>
+  <div class="card-footer">
+    <span class="tag">海洛因</span><span class="tag">社會認知</span><span class="tag">fNIRS</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41941931/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚖️</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>Fehr-Schmidt 不平等厭惡如何約束社會情境下 ventromedial 前額葉皮質的價值編碼：計算 fMRI 研究</h3>
+  <p class="journal-source">Brain and cognition</p>
+  <p>研究發現 vmPFC 像預期般依據 offer 大小編碼主觀價值，但在收到來自內群體 peers 的 offer 時，不平等厭惡參數（α）越高的人，其 vmPFC 反應越弱，顯示 vmPFC 的價值訊息受到個體公平偏好的調節，特別是在內群體情境中，此發現擴展了群體如何調節公平處理的先前研究。</p>
+  <div class="card-footer">
+    <span class="tag">vmPFC</span><span class="tag">公平偏好</span><span class="tag">伊坦烏姆遊戲</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42462548/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">😣</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>青少年壓力下負性情感反應的強度與發炎及額葉-杏仁核連結的關聯</h3>
+  <p class="journal-source">Brain, behavior, &amp; immunity - health</p>
+  <p>研究顯示較高的全身發炎（以 CRP 為標誌）會增強青少年在日常壓力下負性情緒的即時反應，雖然側頭前額葉皮質-杏仁核連結可能調整此關聯，但樣本力量不足無法達顯著水準，提示發炎是青少年壓力敏感性的重要生物學貢獻因子。</p>
+  <div class="card-footer">
+    <span class="tag">發炎</span><span class="tag">青少年</span><span class="tag">壓力反應</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42294081/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>老年人在主動停止任務中效肌特弰性皮質脊髓調節得以保留：一種新穎的貝葉斯方法</h3>
+  <p class="journal-source">Neurobiology of aging</p>
+  <p>研究發現雖老年人在成功選擇性停止後，對持續動作成分的 ralent 減慢程度較年輕組顯著增加（BF10&gt;1000），但其皮質脊髓興奮度（CSE）的調節模式在主動提示下仍表現出效肌特異性：將要停止的手肌肉MEP振幅降低，而必須反應的手肌肉振幅增加，與年輕組無顯著差異（BF01=57），提示主動抑制的神經機制在 ageing 中可能得以保留。</p>
+  <div class="card-footer">
+    <span class="tag">主動抑制</span><span class="tag">皮質脊髓興奮度</span><span class="tag">衰老</span><span class="tag">貝葉斯分析</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41935413/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">臨床研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">3</span>
+    </div><div class="topic-row">
+      <span class="topic-name">認知神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經調節技術</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">血管認知障礙</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經退行性疾病</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">精神疾病分子機制</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">經顱聚焦超聲</span><span class="keyword">腦機介面</span><span class="keyword">運動皮質</span><span class="keyword">慢性高血壓</span><span class="keyword">社會隔離</span><span class="keyword">血腦屏障</span><span class="keyword">性別差異</span><span class="keyword">ALS</span><span class="keyword">前額葉皮質</span><span class="keyword">執行功能</span><span class="keyword">語言</span><span class="keyword">細胞表型</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
