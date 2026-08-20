@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年8月20日</title>
+<meta name="description" content="2026年8月20日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月20日（週四）</span>
+        <span class="badge badge-count">📊 12 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 12 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">👥</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>領袖-追隨者動態的非對稱前額葉皮質表徵</h3>
+  <p class="journal-source">Nature &middot; Asymmetric prefrontal representations for leader-follower dynamics.</p>
+  <p>該研究建立了小鼠合作範式以捕捉領袖-追隨者動態，發現內側前額葉皮質（mPFC）特別在追隨者中表徵領袖-追隨者角色，並計算伙伴位置的自我中心社會價值圖。透過多主體逆向強化學習框架，發現mPFC活動可解碼引導合作決策的潛在價值函數。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">小鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">領袖-追隨者合作範式</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">mPFC活動干擾（特別是在追隨者中）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">合作表現、自我與伙伴相關線索的決策權重、mPFC中的領袖-追隨者動態表徵</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">社會認知</span><span class="tag">領導力</span><span class="tag">前額葉皮質</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42618793/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">💊</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>COMT抑制的治療潛力：認知及以外</h3>
+  <p class="journal-source">Molecular psychiatry &middot; The therapeutic potential of COMT inhibition: cognition and beyond.</p>
+  <p>文章回顧了COMT抑制劑（如托卡朋）對前額葉皮質多巴胺信號的影響，指出其可改善工作記憶並減少衝動或冒險行為，效應取決於基線前額葉皮質多巴胺水準，符合倒U型曲線。人類與動物研究皆支持COMT透過調節前額葉皮質多巴胺來增強自上而下行為控制的模型，暗示其在神經精神疾病中的治療潛力。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">具有執行功能障礙的神經精神疾病個體</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">COMT抑制（如托卡朋）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">安慰劑或未處理組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">工作記憶改善、其他認知領域提升、衝動或冒險行為減少</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">COMT</span><span class="tag">工作記憶</span><span class="tag">衝動控制</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42618604/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">❤️‍🩹</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>青少年雙相情感障礙中血壓升高與腦血流降低相關</h3>
+  <p class="journal-source">Journal of affective disorders &middot; Higher blood pressure is associated with lower cerebral blood flow in youth with bipolar disorder.</p>
+  <p>研究發現在13-20歲青少年中，尤其是雙相情感障礙（BD）群體，收縮壓與舒張壓升高與前額葉皮質及其他腦區腦血流降低顯著相關，而在健康對照組中未見此關聯。提示高血壓可能經由神經血管功能障礙參與BD的神經生物學機制，影響認知與情緒調節。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">13-20歲青少年（76例BD，68例健康對照）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">收縮壓（SBP）/舒張壓（DBP）</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低血壓</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">前額葉皮質及其他腦區腦血流（CBF）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">雙相情感障礙</span><span class="tag">腦血流</span><span class="tag">血壓</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42617921/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">🛡️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>PHD3缺失護小鼠免受脂多醣或手術創傷引發的神經炎症與認知障礙</h3>
+  <p class="journal-source">Experimental neurology &middot; Loss of PHD3 rescues mice from Neuroinflammation and cognitive disorders induced by lipopolysaccharide or surgical trauma.</p>
+  <p>研究發現PHD3基因敲除小鼠在LPS或手術/麻醉誘導的神經炎症模型中，認知缺損顯著改善，伴隨海馬與前額葉皮質中促炎細胞激素TNF-α、IL-1β減少及NF-κB通路抑制。此外，PHD3缺失減少小胶质细胞激活，恢复突觸蛋白PSD95和Synapsin I水平，並降低神經細胞凋亡。提示PHD3是神經炎症介導認知障礙的潛在治療靶標。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">8週齡雄性野生型與PHD3敲除C57BL/6J小鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">PHD3基因敲除</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">野生型對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">認知功能（Y迷宮、開放場、新物體識別）、神經炎症標誌、突觸完整性、神經細胞凋亡</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">PHD3</span><span class="tag">神經炎症</span><span class="tag">認知保護</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42617908/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">⚖️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>躁狂風險中獎勵評估與衝動決策的神經標誌物</h3>
+  <p class="journal-source">JAMA psychiatry &middot; Neural Markers of Reward Valuation and Impulsive Decision-Making in Mania Risk.</p>
+  <p>研究發現在躁狂或輕躁狂風險個體中，左外側前額葉皮質（L-vlPFC）激活與較低折扣率（獎勵敏感性）正相關，而前補運動區（pre-SMA）激活與較高折扣率（衝動決策）正相關，且後者關聯受抑鬱嚴重程度調節。提示L-vlPFC與pre-SMA可能代表躁狂風險的兩條分離神經通路：一關聯獎勵價值處理，一關聯衝動性選擇。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">約18-30歲有躁狂/輕躁狂風險的成年人（228人）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">獎勵期待相關的L-vlPFC與pre-SMA激活</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低激活基線</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">延遲折扣行為（獎勵評估 vs 衝動決策）、躁狂風險評分</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">躁狂風險</span><span class="tag">決策</span><span class="tag">前額葉皮質亞區</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42616538/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧩</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>自閉症兒童的歸納推理：探索個體差異的來源</h3>
+  <p class="journal-source">Journal of experimental child psychology</p>
+  <p>研究發現雖自閉症譜系障礙（ASD）兒童具備歸納推理能力，但表現不如正常發展兒童一致；其能力與語意判斷、抑制控制及執行功能顯著相關，尤其執行功能透過階層迴歸預測ASD群體的歸納推理表現，提示執行功能缺損可能是ASD兒童歸納推理困難的關鍵認知基礎。此結果強調執行功能介入對提升ASD兒童認知彈性的潛在價值。</p>
+  <div class="card-footer">
+    <span class="tag">自閉症</span><span class="tag">歸納推理</span><span class="tag">執行功能</span><span class="tag">語意判斷</span><span class="tag">抑制控制</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42617344/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📋</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>提出D-DAND量表：開發用於寶特綜合征照護者施用的共病綜合評估工具</h3>
+  <p class="journal-source">Epilepsia</p>
+  <p>D-DAND量表為照護者施訪工具，專門評估寶特綜合征（DS）患者超越癲癇發作的發育與行為共病（如執行功能、社交、睡眠等），經驗證具有優秀再測信度（r≈.98）及效度，能捕捉DS特有神經精神症狀，而通用量表（如Vineland、BRIEF）易遺漏。此工具促進DS共病之早期偵測與個別化照護規劃，填鑒別評估空白。</p>
+  <div class="card-footer">
+    <span class="tag">寶特綜合征</span><span class="tag">照護者報告量表</span><span class="tag">執行功能</span><span class="tag">神經精神共病</span><span class="tag">量表開發</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42611685/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🪱</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>無症狀瘧原蟲感染及其治療對西肯亞學齡兒童短期認知表現的影響：前瞻性隊列研究</h3>
+  <p class="journal-source">The Journal of infection</p>
+  <p>研究發現西肯亞微量PCR檢測到的無症狀疟原虫感染與隨時間推移的複合認知分數下降顯著相關（β=-0.11），而顯微鏡陽性感染的治療則與認知改善相關（β=+0.082）；且促炎細胞因子CXCL11/ITAC水平升高與認知表現不良關聯，提示低階發炎可能介導疟疾對認知的負面影響。此結果強調控制無症狀疟疾對兒童認知發展的重要性。</p>
+  <div class="card-footer">
+    <span class="tag">瘧原蟲</span><span class="tag">認知表現</span><span class="tag">發炎細胞因子</span><span class="tag">肯亞兒童</span><span class="tag">預防性治療</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42617751/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>(2R,6R)-HNK 透過調節 GluA1 減輕單一長期壓力加足電擊模型大鼠的負面情緒行為與突觸可塑性缺損</h3>
+  <p class="journal-source">Journal of affective disorders</p>
+  <p>研究發現單一長期壓力加足電擊（SPS&amp;S）會降低海馬與前額葉皮質的GluA1表達，導致焦慮與抑鬱樣行為惡化；而(2R,6R)-HNK治療可恢復GluA1依賴的PI3K/AKT訊號通路，改善突觸功能，其效應在前額葉皮質與海馬最為顯著。此結果支持GluA1在壓力相關情緒障礙中的關鍵調節角色，並顯示(2R,6R)-HNK具治療潛力。</p>
+  <div class="card-footer">
+    <span class="tag">GluA1</span><span class="tag">壓力創傷</span><span class="tag">(2R,6R)-HNK</span><span class="tag">前額葉皮質</span><span class="tag">突觸可塑性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41967686/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💪</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>身體活動與身體適能對殘障兒童青少年執行功能的關聯</h3>
+  <p class="journal-source">Medicine and science in sports and exercise</p>
+  <p>研究顯示，輕度及中高強度身體活動（LPA/MVPA）與肌肉適能（如握力、仰臥起坐）顯著正相關於執行功能的準確性，尤其在肢體與智力障礙群中一致；男女差異顯示肌肉適能在殘障男孩中對執行功能影響較大，而MVPA在殘障女孩中影響更顯。此結果支持推動身體活動作為非藥物干預以增強殘障兒青執行功能。</p>
+  <div class="card-footer">
+    <span class="tag">身體活動</span><span class="tag">執行功能</span><span class="tag">殘障兒童</span><span class="tag">肌肉適能</span><span class="tag">性別差異</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42613783/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🏃</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>運動介入對癌症相關認知障礙的影響：系統評論與網路meta分析</h3>
+  <p class="journal-source">Archives of physical medicine and rehabilitation</p>
+  <p>納入27項RCT顯示，運動介入可顯著改善癌症患者短期與長期的主觀認知功能與客觀執行功能（如工作記憶、處理速度），但無單一運動模式在所有認知領域中優於其他；短期複合運動對主觀認知功能效果最佳，長期則有氧運動與多成分運動分別在不同認知領域優勢顯著。此研究強調運動的認知保護效應，並提供運動處方的模式參考。</p>
+  <div class="card-footer">
+    <span class="tag">癌症認知障礙</span><span class="tag">運動介入</span><span class="tag">網路meta分析</span><span class="tag">執行功能</span><span class="tag">工作記憶</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42604722/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🤖</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>增強任務設計與AI的多模態數位治療於兒童青少年ADHD核心症狀與執行功能的效應：RCT的系統評論與網路meta分析</h3>
+  <p class="journal-source">Journal of medical Internet research</p>
+  <p>該網路meta分析發現，AI整合認知-運動雙任務數位治療（DTx）在改善ADHD核心症狀與執行功能（特別是多動-衝動與執行功能）方面具有最高機率優勢（SUCRA &gt;80%），證實其於減少注意力不足、多動與改善執行功能方面的潛力，雖受研究間異質性（如介入時長、年齡）影響。此結果支持AI驅動、任務設計導向的DTx為ADHD非藥物療法之有希望方向。</p>
+  <div class="card-footer">
+    <span class="tag">ADHD</span><span class="tag">數位治療</span><span class="tag">AI整合</span><span class="tag">認知-運動雙任務</span><span class="tag">執行功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42614105/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">情感神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">系統神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">精神藥理學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經免疫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">兒童發展與復健</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">癌症復健</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">兒童精神健康與數位療法</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">發展心理學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經科學與量表開發</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">傳染病與兒童神經發育</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">社會認知</span><span class="keyword">領導力</span><span class="keyword">前額葉皮質</span><span class="keyword">COMT</span><span class="keyword">工作記憶</span><span class="keyword">衝動控制</span><span class="keyword">雙相情感障礙</span><span class="keyword">腦血流</span><span class="keyword">血壓</span><span class="keyword">PHD3</span><span class="keyword">神經炎症</span><span class="keyword">認知保護</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
