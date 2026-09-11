@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年9月11日</title>
+<meta name="description" content="2026年9月11日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年9月11日（週五）</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 10 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>免疫蛋白質組學與5歲兒童皮質發育指數的關聯</h3>
+  <p class="journal-source">Journal of anatomy &middot; Immune proteomic associations with indices of cortical development in 5-year-old children.</p>
+  <p>研究發現血清中特定免疫蛋白（如CXCL10、IL17A、LILRB4）與兒童灰質體積增長和全球皮質厚度呈負相關，且多種免疫蛋白與右內側眶前皮質平均擴散度增加相關。此為首次闡釋免疫生理與兒童腦結構之關聯的研究。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">5歲典型發育兒童 (n=101)</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">血清免疫蛋白質組學分析 (356種炎症相關蛋白)</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無明確對照組（相關性分析）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">灰質體積增長、皮質厚度、擴散度等神經影像指標</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">免疫學</span><span class="tag">神經發育</span><span class="tag">皮質厚度</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42723204/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">⚖️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>懲罰敏感度與認知再評估的神經基礎：右背外側前額葉皮質與右 precuneus 之間功能連線的證據</h3>
+  <p class="journal-source">Progress in neuro-psychopharmacology &amp; biological psychiatry &middot; The neural basis of punishment sensitivity and cognitive reappraisal: Evidence from functional connectivity between the right dorsolateral prefrontal cortex and right precuneus.</p>
+  <p>研究證明右 dlPFC 灰質體積增加與懲罰敏感度正相關，而右 dlPFC 與右 precuneus 之間功能連線強度亦與懲罰敏感度正相關，且此連線在懲罰敏感度與認知再評估之間具有統計抑制效應， suggesting 其可能為該關係的神經相關。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">357名健康大學生</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">行為測量 + VBM + RSFC + 中介分析</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無明確干預（觀察性研究）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">懲罰敏感度、認知再評估能力、右 dlPFC 灰質體積、右 dlPFC-precuneus 功能連線</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">懲罰敏感度</span><span class="tag">認知再評估</span><span class="tag">功能連線</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42722323/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>領域一般與語言特定腦區接受間歇性 θ 爆發式刺激 (iTBS) 對規則學習的差異效應</h3>
+  <p class="journal-source">NeuroImage &middot; Differential Effects of iTBS over Domain-General and Language-Specific Brain Regions on Rule Learning.</p>
+  <p>針對右 DLPFC (領域一般) 和左 IFG (語言特定) 的 iTBS 皆能提升規則學習表現，前者增強大規模網絡整合，後者強化語言網絡專業化與跨系統協調。iTBS 加速由探索狀態轉向靈活狀態的過渡，優化階段依賴的資訊流動。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">參與者分為三組：右 DLPFC iTBS、左 IFG iTBS、假性刺激組</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">間歇性 θ 爆發式刺激 (iTBS) 作用於右 DLPFC 或左 IFG</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">假性 iTBS 作用於頂點</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">規則學習準確率、fMRI 激活模式、網絡整合 (gPPI)、因果建模 (DCM)</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">iTBS</span><span class="tag">規則學習</span><span class="tag">DLPFC</span><span class="tag">IFG</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42722310/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">🎥</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>解釋策略對影片學習陳述性知識的神經機制</h3>
+  <p class="journal-source">NeuroImage &middot; Neural Mechanisms Underlying the Impact of Explanation Strategies on Video Learning of Declarative Knowledge.</p>
+  <p>自我解釋策略促進即時關聯記憶保留並激活較廣泛的前額-語言區域（如前極皮質、雙側 DLPFC、布洛卡區），而替他人解釋則在解釋與記憶保留階段增加左 DLPFC、布洛卡區等區域的 HbO 反應。研究顯示解釋目標對神經處理與學習階段性影響具有差異。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">60名大學生</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">自我解釋條件 vs 替他人解釋條件</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無對照（兩種主動實驗條件比較）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">即時關聯記憶表現、學術自我效能、前額-顳顶區 HbO 反應、功能連線</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">自我解釋</span><span class="tag">fNIRS</span><span class="tag">DLPFC</span><span class="tag">學習</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42710641/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>多回波fMRI提升靜態功能連接可靠性，有助於經顱磁刺激針對 dorsolateral 前額葉皮質的個體化定位</h3>
+  <p class="journal-source">AJNR. American journal of neuroradiology &middot; Improved Reliability of Resting-State fMRI Connectivity Using Multi-Echo Acquisition: Implications for Personalized Transcranial Magnetic Stimulation Targeting.</p>
+  <p>在抑鬱症患者中，多回波（ME）fMRI顯著提升全腦靜態功能連接的分半相關性（p=.006）和內部一致係數（ΔICC=0.16, p=.03）。針對經顱磁刺激（TMS）目標區（如SGC-DLPFC、DEP-DLPFC），ME fMRI的連接可靠性數值上優於單回波（SE），儘管在TMS特定ROI中差異未達統計顯著。此結果支持ME fMRI作為改進TMS個體化定位的潛在工具。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">患有重度抑鬱症的成人（20女性，15男性）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">多回波（ME）靜態fMRI掃描</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">單回波（SE）靜態fMRI掃描</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">ME顯著提升全腦連接分半相關性（p=.006）和ICC（ΔICC=0.16, p=.03）；TMS相關ROI連接可靠性數值上優於SE（SGC-DLPFC: 0.47 vs 0.02；DEP-DLPFC: 0.75 vs 0.40）</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">fMRI可靠性</span><span class="tag">TMS定位</span><span class="tag">DLPFC</span><span class="tag">抑鬱症</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/41862185/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚗️</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>甘氨酸轉運體1抑制劑 Bitopertin 對小鼠內側前額葉皮質興奮-抑制網路連線的影響</h3>
+  <p class="journal-source">Neuropharmacology</p>
+  <p>Bitopertin 對小鼠 mPFC 中不同類抑制性神經元的興奮輸入具有亞型特異性影響：減少 VIP-like 神經元的興奮輸入機會與區域，但增強對 PV-like 神經元的突觸連結強度，未顯著影響金字體神經活動。結果表明其主要透過調節抑制網路來影響 E/I 平衡，有助於理解其在精神分裂症認知障礙中的作用機制。</p>
+  <div class="card-footer">
+    <span class="tag">Bitopertin</span><span class="tag">GlyT1</span><span class="tag">mPFC</span><span class="tag">E/I 平衡</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42722103/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🔬</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>PPA暴露導致大鼠內側前額葉皮質線粒體相關囊泡結構的超微結構重塑</h3>
+  <p class="journal-source">Brain research</p>
+  <p>單次腹腔注射丙酸（PPA）對青春期雄性大鼠內側前額葉皮質線粒體-囊泡關聯產生區域特異性改變：神經細胞體與突觸區單膜囊泡結合減少，而前突觸端雙膜囊泡結合增加，總線粒體數量不變。此結果顯示PPA選擇性重塑線粒體品質控制途徑，可能與自閉症樣表型相關。</p>
+  <div class="card-footer">
+    <span class="tag">線粒體</span><span class="tag">PPA模型</span><span class="tag">自閉症</span><span class="tag">超微結構</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42702331/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚖️</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>新穎平台測試揭示社會支配行為與側坐核激活正相關，而非內側前額葉皮質</h3>
+  <p class="journal-source">Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology</p>
+  <p>利用新穎競爭平台測試發現，在雄性及雌性小鼠中，社會支配排名與側坐核（LHb）激活呈正相關，而內側前額葉皮質（mPFC）激活與排名無關。此結果強調LHb在社會競爭動機中的關鍵作用，挑戰傳統視調 mPFC 為社會階層的主要調節中心。</p>
+  <div class="card-footer">
+    <span class="tag">社會支配</span><span class="tag">側坐核</span><span class="tag">前額葉皮質</span><span class="tag">行為神經科學</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42697942/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📞</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>電話版Hopkins Verbally Learning Test-Revised延遲回顧作為SuperAger篩選工具，具有良好識別效能</h3>
+  <p class="journal-source">Archives of clinical neuropsychology : the official journal of the National Academy of Neuropsychologists</p>
+  <p>電話版HVLT-R延遲回顧（≥9分）在預測親自測試中SuperAger記憶標準時表現良好：AUC=0.80，敏感度85%，特異度61%。在多領域電話預篩檢中，此工具可有效提濃候選人，提高SuperAger研究的篩檢效率，適合作為資源密集型親自評估之前的初步篩選。</p>
+  <div class="card-footer">
+    <span class="tag">SuperAger</span><span class="tag">記憶篩檢</span><span class="tag">遠端評估</span><span class="tag">HVLT-R</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42715377/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⏳</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>動脈自旋標記血流動力學指標（ASL-sCoV）預測腦小血管病進展與認知衰退，超過11年追蹤</h3>
+  <p class="journal-source">Stroke</p>
+  <p>基底狀態下較高的ASL空間變異係數（ASL-sCoV）與白質高信號和擴大周血管空間的橫斷面負擔相關，並預測其11年內更快速增加（pFDR=0.03）。同時，較高baseline ASL-sCoV與執行功能、資訊處理、語言和視空間表現的加速下降相關（p&lt;0.05），而灰質CBF無顯著關聯。ASL-sCoV可作為現有ASL數據中易得的血流動力學標誌，用於預測小血管病相關認知惡化。</p>
+  <div class="card-footer">
+    <span class="tag">ASL-sCoV</span><span class="tag">腦小血管病</span><span class="tag">認知衰退</span><span class="tag">縱向追蹤</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42717860/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">臨床研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">3</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎研究</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床神經影像學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">行為神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床神經心理學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">免疫學</span><span class="keyword">神經發育</span><span class="keyword">皮質厚度</span><span class="keyword">懲罰敏感度</span><span class="keyword">認知再評估</span><span class="keyword">功能連線</span><span class="keyword">iTBS</span><span class="keyword">規則學習</span><span class="keyword">DLPFC</span><span class="keyword">IFG</span><span class="keyword">自我解釋</span><span class="keyword">fNIRS</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
