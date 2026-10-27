@@ -1,7 +1,7 @@
 export const CONFIG = {
   nvidia: {
     baseUrl: 'https://integrate.api.nvidia.com/v1',
-    models: ['nvidia/nemotron-3-super-120b-a12b', 'nvidia/nemotron-3-nano-30b-a3b'],
+    models: ["nvidia/nemotron-3-ultra-550b-a55b"],
     maxTokens: 16384,
     timeout: 660000,
     temperature: 1.0,
