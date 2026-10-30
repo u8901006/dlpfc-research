@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年10月30日</title>
+<meta name="description" content="2026年10月30日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年10月30日（週五）</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 10 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧠⚡</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>陽極經顱直流電刺激背外側前額葉治療中風後認知障礙的安全性與療效：系統性回顧與荟萃分析</h3>
+  <p class="journal-source">Complementary therapies in medicine &middot; Safety and Efficacy of Anodal transcranial direct-current stimulation over the Dorsolateral Prefrontal Cortex in Post-Stroke Cognitive Impairment: A Systematic Review and Meta-Analysis</p>
+  <p>納入 23 項 RCT（1326 例）荟萃分析顯示，陽極 tDCS 刺激 DLPFC 顯著改善中風後認知障礙患者的整體認知篩檢分數（MoCA 平均增 3.17 分、MMSE 平均增 2.52 分）與日常生活功能（MBI 平均增 10.75 分），不論對照組為假刺激合併康復治療或單純康復治療，且刺激患側或左半球均有效。但現有研究方法學品質較低、不良事件回報不足，仍需高品質 RCT 驗證。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">中風後認知障礙成人患者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">陽極 tDCS 刺激背外側前額葉 (DLPFC)</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">假刺激 tDCS ± 康復治療、單純康復治療</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">MoCA、MMSE、MBI 分數變化、不良事件</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">tDCS</span><span class="tag">中風後認知障礙</span><span class="tag">荟萃分析</span><span class="tag">DLPFC</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42957099/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🔬🧭</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>人類杏仁核下區對單胺能中腦與皮質路徑的雙價調節：7T fMRI 動態因果模型研究</h3>
+  <p class="journal-source">The Journal of neuroscience : the official journal of the Society for Neuroscience &middot; Bivalent habenula modulation of human monoaminergic midbrain and cortical pathways</p>
+  <p>利用 7T fMRI 與動態因果模型，在 47 位健康成人中證實杏仁核下區對腹側被蓋區 (VTA) 與背側縫核 (DRN) 具有雙向調節：負回饋抑制、正回饋興奮。此機制跨越逆轉學習與知覺決策兩種任務可重現，且顯示任務特定的皮質-皮質下路徑調節（VTA→dACC、DRN→mPFC、dACC→杏仁核下區），為人類獎懲整合與適應行為提供首個模型層面的有效連接證據。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">健康成人 (n=47)</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">負/正回饋誘發的獎勵預測誤差任務</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">任務條件間比較（負 vs 正回饋；兩種任務範式）</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">杏仁核下區→VTA/DRN/mPFC/dACC 的有效連接強度變化</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">7T fMRI</span><span class="tag">杏仁核下區</span><span class="tag">單胺能系統</span><span class="tag">獎勵預測誤差</span><span class="tag">動態因果模型</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42957319/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🧩📉</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>大憂鬱症前扣帶回皮質亞區功能連結特徵與緩解相關變化</h3>
+  <p class="journal-source">Progress in neuro-psychopharmacology &amp; biological psychiatry &middot; Characteristic of anterior cingulate cortex connectivity at subregional level in major depressive disorder</p>
+  <p>以 141 例 MDD 與 138 例健康對照的大樣本 rs-fMRI 發現，MDD 基線呈現廣泛的 ACC 亞區（尤其是圍膝前部）與前額頂網絡 (FPN) 和預設模式網絡 (DMN) 的過度連結。追蹤發現緩解組的 pgACC 與 dlPFC/vlPFC 連結強度下降並趨近健康對照水平，未緩解組則無顯著變化，提示 pgACC-dlPFC/vlPFC 連結可能為緩解的神經影像生物標記。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">MDD 患者 (n=141) 與健康對照 (n=138)</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">休息態 fMRI 縱向追蹤</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">MDD vs HC 基線；緩解組 vs 未緩解組 追蹤變化</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">五個 ACC 亞區的功能連結變化與臨床症狀相關</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">大憂鬱症</span><span class="tag">前扣帶回亞區</span><span class="tag">功能連結</span><span class="tag">緩解預測</span><span class="tag">縱向研究</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42956956/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">💊</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>聯合刺激毒蕈鹼 M1 與 M4 受體可逆轉雄性小鼠可卡因誘發的注意力缺陷</h3>
+  <p class="journal-source">Journal of psychopharmacology (Oxford, England) &middot; Combined muscarinic receptor M(1) and M(4) stimulation reverses cocaine-induced attention deficits in male mice.</p>
+  <p>亞慢性可卡因暴露持續損害小鼠注意力表現，單獨使用 M1 激動劑或 M4 正向別構調節劑效果有限，但聯合給藥能完全逆轉注意力缺陷，支持 M1/M4 雙靶點作為可卡因使用障礙認知症狀治療的新策略。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雄性 C57BL/6J 小鼠（亞慢性可卡因給藥模型）</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">VU0364572 (M1 激動劑) + VU0152100 (M4 PAM) 聯合治療</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">單一藥物治療組、載體對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">觸控螢幕持續表現測試中的辨別力、準確率、錯誤警報率</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">可卡因使用障礙</span><span class="tag">毒蕈鹼受體</span><span class="tag">注意力</span><span class="tag">前額葉認知</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42921705/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🏃‍♂️</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>接受訓練的帕金森氏症患者與不同運動量健康長者在日常活動中姿態控制之比較</h3>
+  <p class="journal-source">Journal of aging and physical activity &middot; Comparison of Postural Control During Activities of Daily Living Between Trained Individuals With Parkinson&#039;s Disease and Healthy Older Adults With Different Exercise Levels.</p>
+  <p>接受神經功能物理治療的帕金森氏症患者，其功能性任務中的姿態控制表現可達致與習慣運動的健康長者相當水平，顯示規律運動可克服疾病特徵並產生正向的姿態控制反應。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">35 例受訓 PD 患者 vs 35 例習慣運動長者 vs 35 例不運動長者</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">神經功能物理治療</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同運動習慣的健康對照組</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">壓力中心面積、振幅、速度；平衡信心量表</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">帕金森氏症</span><span class="tag">姿態控制</span><span class="tag">運動干預</span><span class="tag">日常功能</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42956723/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">💡🧠</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>經顱紅外雷射刺激對緩解期雙相情感障礙大腦灌注的雙相效應：ASL-MRI 研究</h3>
+  <p class="journal-source">Psychiatry research</p>
+  <p>29 位緩解期 BD 患者接受 6 週雙側極前區 (BA10) TILS，ASL-MRI 顯示首次刺激後左側上額回 (BA10) 與眶額皮質 (BA11) 灌注量銳增，但 6 週後顯著下降；右側前扣帶回 (BA32) 灌注量亦在第 1 次至第 6 次間下降。此雙相反應模式提示 TILS 可能透過線粒體調節改善認知，但劑量與療程仍需優化。</p>
+  <div class="card-footer">
+    <span class="tag">雙相情感障礙</span><span class="tag">經顱紅外雷射</span><span class="tag">ASL-MRI</span><span class="tag">大腦灌注</span><span class="tag">光生物調節</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42956654/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⚡🧬</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>脊髓刺激透過調節小膠質細胞 lnc-PCM1/PCM1/PKC/IFN-γ 訊號軸緩解慢性疼痛合併認知缺陷</h3>
+  <p class="journal-source">Molecular neurobiology</p>
+  <p>在 SNI 大鼠模型中，脊髓刺激 (SCS) 改善認知表現，並下調前額葉小膠質細胞特異性表達的 lnc-PCM1，進而上調 PCM1、抑制 PKC 磷酸化與 IFN-γ，減少 M1 極化與促發炎細胞因子。體外條件培養液實驗證實該軸調節神經氧化壓力、粒線體膜電位、胞凋亡與突觸標記。雖缺乏正式上位基因與 IFN-γ 中和實驗，但發現新穎的小膠質-神經免疫機制，為 CPCD 治療提供標的。</p>
+  <div class="card-footer">
+    <span class="tag">脊髓刺激</span><span class="tag">慢性疼痛認知缺陷</span><span class="tag">小膠質細胞</span><span class="tag">lncRNA</span><span class="tag">神經炎症</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42932071/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧩</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>自閉症譜系障礙個體視覺搜尋特徵與前額葉腦活動：功能性近紅外光譜研究</h3>
+  <p class="journal-source">Brain &amp; development</p>
+  <p>研究發現 ASD 兒童視覺搜尋呈現方向不一致與混亂模式，且隨機陣列任務中右側前額葉皮質活化顯著低於典型發展兒童，提示 PFC 異側側化功能缺陷可能為 ASD 視覺注意缺陷的神經基礎。</p>
+  <div class="card-footer">
+    <span class="tag">自閉症</span><span class="tag">視覺搜尋</span><span class="tag">fNIRS</span><span class="tag">前額葉側化</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42925732/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>基底前腦核深部腦刺激透過前額葉膽鹼能調節改善自閉症大鼠模型的行為異常</h3>
+  <p class="journal-source">Neuroreport</p>
+  <p>NBM-DBS 可顯著改善 VPA 誘導自閉症大鼠的社交缺陷、過度活躍與焦慮行為，並增加中前額葉乙醯膽鹼酯酶免疫反應神經元數量，證實膽鹼能系統調節 PFC 為治療自閉症核心症狀的潛在機制。</p>
+  <div class="card-footer">
+    <span class="tag">自閉症</span><span class="tag">深部腦刺激</span><span class="tag">基底前腦</span><span class="tag">膽鹼能系統</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42911058/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">👶</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>3 歲幼兒簡單與複雜執行功能技能與適應功能的關聯：自閉症與 ADHD 特質豐富樣本研究</h3>
+  <p class="journal-source">Journal of child psychology and psychiatry, and allied disciplines</p>
+  <p>績效基測得的複雜執行功能（抑制轉換、更新）在控制發展水平、自閉症與 ADHD 特質後，仍能額外預測適應功能，強調學齡前早期針對複雜 EF 的介入可能改善高風險幼兒的日常生活功能。</p>
+  <div class="card-footer">
+    <span class="tag">學齡前</span><span class="tag">執行功能</span><span class="tag">適應功能</span><span class="tag">自閉症/ADHD 高風險</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42933870/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">臨床治療/神經調節</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">2</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎神經科學/影像學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">精神醫學/神經影像</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎神經科學/轉譯醫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經發育障礙/神經影像</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">成癮神經科學/藥物開發</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">運動神經科學/復健醫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經發育障礙/神經調節療法</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">發展心理學/早期介入</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">tDCS</span><span class="keyword">中風後認知障礙</span><span class="keyword">荟萃分析</span><span class="keyword">DLPFC</span><span class="keyword">7T fMRI</span><span class="keyword">杏仁核下區</span><span class="keyword">單胺能系統</span><span class="keyword">獎勵預測誤差</span><span class="keyword">動態因果模型</span><span class="keyword">大憂鬱症</span><span class="keyword">前扣帶回亞區</span><span class="keyword">功能連結</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-ultra-550b-a55b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
