@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DLPFC Research &middot; 前額葉皮質文獻日報 &middot; 2026年11月7日</title>
+<meta name="description" content="2026年11月7日 前額葉皮質文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 100px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .link-banner { margin-top: 16px; animation: fadeUp 0.5s ease 0.4s both; }
+  .link-banner + .link-banner { margin-top: 12px; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 70px; font-size: 11px; } }</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>DLPFC Research &middot; 前額葉皮質文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年11月7日（週六）</span>
+        <span class="badge badge-count">📊 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日共收錄 10 篇前額葉皮質相關文獻，涵蓋多個研究領域。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#1</span>
+    <span class="emoji-icon">🧬</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>人類皮質中選擇性 Gi1 而非 Gq 蛋白活化區分致幻與非致幻 5-HT2A 受體激動劑</h3>
+  <p class="journal-source">Neurochemistry international &middot; Pathway-selective G(i1), but not G(q), protein activation distinguishes hallucinogenic from non-hallucinogenic serotonin 5-HT(2A) receptor agonists in the human cortex.</p>
+  <p>利用人類額葉皮質死後組織與 5-HT2A 敲除小鼠驗證，發現迷幻藥物（DOI、LSD 等）能同時活化 Gq/11 與 Gi1 蛋白，而非致幻類似物僅活化 Gq/11。Gi1 招募可能是 5-HT2A 介導致幻效應的關鍵分子機制，為開發無致幻副作用的精神藥物提供重要標靶。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">人類額葉皮質死後組織、5-HT2A KO 小鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">致幻/非致幻 5-HT2A 激動劑</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">Gq/11 與 Gi1 蛋白活化程度</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">[35S]GTPγS 結合與免疫沉澱定量</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">5-HT2A</span><span class="tag">迷幻藥物</span><span class="tag">G蛋白偏向性訊號</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42994673/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#2</span>
+    <span class="emoji-icon">🧠</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>大麻二酚透過 5-HT1A、CB1 與 nNOS 機制逆轉單一持久壓力導致的恐懼消退缺陷</h3>
+  <p class="journal-source">Neuropharmacology &middot; Cannabidiol prevents fear extinction deficits caused by single prolonged stress in rats: possible involvement of serotoninergic, cannabinoid, and nitric mechanisms.</p>
+  <p>在 PTSD 的 SPS 大鼠模型中，重複給予 CBD (5-10 mg/kg) 可正常化消退記憶缺陷與前額葉前邊緣區 nNOS 磷酸化過度，效應可被 5-HT1A 與 CB1 拮抗劑逆轉；單次高劑量 CBD (30 mg/kg) 亦有效。證實 CBD 為多標靶 PTSD 候選藥物。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">SPS 模型雄性 Wistar 大鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">重複/單次 CBD 給藥</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">WAY-100635、AM281、7-NI 拮抗/抑制劑</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">恐懼條件消退表現、PL-mPFC nNOS 磷酸化、皮質醇/心率反應</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">PTSD</span><span class="tag">大麻二酚</span><span class="tag">恐懼消退</span><span class="tag">nNOS</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42994609/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#3</span>
+    <span class="emoji-icon">🌊</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>額葉皮質中基於 Theta 頻率的資訊組織動態機制</h3>
+  <p class="journal-source">Cell reports &middot; Theta-based organization of information in the frontal cortex.</p>
+  <p>非人靈長類分類任務中記錄 dlPFC、vlPFC、FEF 單元活動，發現 theta 相位選擇性耦合行為相關尖峰；決策時 theta 影響由後向前傳遞，正確後 dlPFC→FEF 增強，錯誤後則反向 FEF→vlPFC 主導。Theta-beta/gamma 巢狀耦合動態調節認知控制。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">非人靈長類 (點圖分類任務)</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">多區單元記錄 (dlPFC/vlPFC/FEF)</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">選擇/正確/錯誤 試次</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">Theta 相位-尖峰耦合、Granger 因果方向、跨頻巢狀耦合</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">Theta震盪</span><span class="tag">前額葉皮質</span><span class="tag">跨頻耦合</span><span class="tag">決策</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42986752/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#4</span>
+    <span class="emoji-icon">⚡</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>3.2 mA 6 Hz tACS 結合數位認知訓練改善輕度認知障礙老人抑制控制的可行性研究</h3>
+  <p class="journal-source">Neurological sciences &middot; Feasibility and tolerability of combining 6 Hz transcranial alternating current stimulation (tACS) at 3.2 mA and digital cognitive training in older adults with mild cognitive impairment.</p>
+  <p>10 位 MCI 長者接受 5 天左 DLPFC 3.2 mA tACS+DCT，100% 完成、副作用輕微。主動組反向注視總錯誤顯著減少 (p=0.028)，語言/視覺記憶隨時間改善，視覺建構力呈趨勢優勢。高強度 tACS 耐受性佳並可能增強認知轉移。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">MCI 老人 (n=10 主動, n=10 假刺激)</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">6 Hz 3.2 mA tACS 左 DLPFC + DCT</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">假刺激 + DCT</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">反向注視錯誤、記憶/視覺建構分數、副作用、依從率</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">tACS</span><span class="tag">輕度認知障礙</span><span class="tag">DLPFC</span><span class="tag">認知訓練</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42986480/" target="_blank">閱讀原文 →</a>
+  </div>
+</div><div class="news-card featured">
+  <div class="card-header">
+    <span class="rank-badge">#5</span>
+    <span class="emoji-icon">🌿</span>
+    <span class="utility-high">高實用性</span>
+  </div>
+  <h3>天麻素調節 PHD2-HIF-1α/糖酵解軸緩解神經炎症與抑鬱樣表型</h3>
+  <p class="journal-source">Journal of ethnopharmacology &middot; Gastrodin Attenuates Neuroinflammation and Depressive-Like Phenotypes via Modulation of the PHD2-HIF-1α/Glycolysis Axis.</p>
+  <p>LPS 誘導炎症性抑鬱小鼠模型中，天麻素劑量依賴性改善行為與前額葉神經損傷。單細胞轉錄組鑑定監視型小膠質細胞 Egln1 (PHD2) 上調；天麻素增強 PHD2 活性促進 HIF-1α 降解，逆轉異常腦糖酵解與神經炎症，提供炎症性抑鬱新標靶。</p>
+  <div class="pico-grid">
+    <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">LPS 誘導抑鬱樣小鼠</span></div>
+    <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">天麻素梯度劑量口服</span></div>
+    <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">HIF-1α 藥理拯救實驗、PHD2 抑制劑</span></div>
+    <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">行為學指標、前額葉病理、單細胞轉錄組、PHD2/HIF-1α/糖酵解指標</span></div>
+  </div>
+  <div class="card-footer">
+    <span class="tag">天麻素</span><span class="tag">炎症性抑鬱</span><span class="tag">PHD2-HIF-1α</span><span class="tag">小膠質細胞</span><span class="tag">糖酵解</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42988023/" target="_blank">閱讀原文 →</a>
+  </div>
+</div></div>
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">👁️</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>睜眼與閉眼靜息態差異調節預設模式網路內部組織：前內側前額葉連結在睜眼時增強</h3>
+  <p class="journal-source">Neuroscience</p>
+  <p>fMRI 比較睜眼 (EO) 與閉眼 (EC) 靜息態，DMN 整體架構穩定，但 EO 增強前內側 PFC 與左上額回連結、EC 則提升全域效率與聚類係數。右楔前葉在 EO 成為樞紐，上額連結在 EC 更顯著。提醒靜息態範式選擇對 DMN 指標解讀的影響。</p>
+  <div class="card-footer">
+    <span class="tag">fMRI</span><span class="tag">預設模式網路</span><span class="tag">靜息態範式</span><span class="tag">前額葉</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42710738/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">📊</span>
+    <span class="utility-mid utility-sm">中</span>
+  </div>
+  <h3>童年虐待與執行功能缺陷的異質性：三層級元分析量化效應值並識別調節因子</h3>
+  <p class="journal-source">Trauma, Violence &amp; Abuse</p>
+  <p>納入 41 研究、137 效應值、6,392 參與者，虐待組整體 EF 表現較差（g = -0.402）。異質性由虐待測量方式、EF 測驗類型、樣本來源解釋。提供量化證據支持分層預防與介入策略。</p>
+  <div class="card-footer">
+    <span class="tag">童年虐待</span><span class="tag">執行功能</span><span class="tag">元分析</span><span class="tag">異質性</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42989997/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧠</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>海馬體與前額葉內源性大麻素、谷氨酸與 GABA 系統的性別差異表達，及胺基酸特徵支撐可卡因合併乙醇尋藥行為的孵化效應</h3>
+  <p class="journal-source">Neuropharmacology</p>
+  <p>雌性大鼠在長期戒斷後表現出強烈的可卡因+乙醇尋藥孵化，伴隨海馬體與 PFC 的內源性大麻素受體 CB1 上調、GABA 能相關基因表達改變；雄性則以谷氨酸能基因下調為主。研究揭示性別特異性神經適應機制，為多重物質濫用的精準治療提供靶點。</p>
+  <div class="card-footer">
+    <span class="tag">成癮</span><span class="tag">性別差異</span><span class="tag">前額葉</span><span class="tag">內源性大麻素</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42288195/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">⌚</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>評估智慧型手錶健康生活型態介入對健康成人認知增強的效果、參與度與接受度：混合方法腦電圖研究方案</h3>
+  <p class="journal-source">JMIR Research Protocols</p>
+  <p>此 RCT 方案招募 72 名久坐成人，比較 Apple Watch 介入組與標準指引對照組 4 週效果。主要結果為 Go/No-Go 任務中 N2/P3 峰值反映的抑制控制，次要包含靜息態腦波頻譜、行為表現與質性訪談。研究將建立可重複的穿戴裝置認知增強評估框架。</p>
+  <div class="card-footer">
+    <span class="tag">穿戴裝置</span><span class="tag">認知增強</span><span class="tag">執行功能</span><span class="tag">RCT 方案</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42993863/" target="_blank">PubMed →</a>
+  </div>
+</div><div class="news-card">
+  <div class="card-header-row">
+    <span class="emoji-sm">🧩</span>
+    <span class="utility-high utility-sm">高</span>
+  </div>
+  <h3>區域性白質高訊號負荷與阿茲海默病高風險者主觀認知衰退的關聯：左側顳葉負荷預測記憶抱怨</h3>
+  <p class="journal-source">Journal of Alzheimer&#039;s Disease</p>
+  <p>150 位認知正常但有 AD 家族史的長者，左側顳葉 WMH 體積與記憶主觀抱怨及總分顯著相關，無區域 WMH 與執行功能抱怨相關。APOE ε4、抑鬱症狀與記憶抱怨相關，冷漠獨立預測記憶抱怨。強調區域性腦血管病理在早期認知變化的臨床意義。</p>
+  <div class="card-footer">
+    <span class="tag">白質高訊號</span><span class="tag">主觀認知衰退</span><span class="tag">阿茲海默病風險</span><span class="tag">神經影像</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/42992378/" target="_blank">PubMed →</a>
+  </div>
+</div></div>
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div><div class="topic-row">
+      <span class="topic-name">分子藥理學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">轉化精神藥理學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">系統神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床神經調控</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">中藥藥理機制</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">基礎神經科學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">臨床試驗設計</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經影像/臨床神經學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">神經影像方法學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div><div class="topic-row">
+      <span class="topic-name">心理學/精神醫學</span>
+      <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+      <span class="topic-count">1</span>
+    </div></div>
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">5-HT2A</span><span class="keyword">迷幻藥物</span><span class="keyword">G蛋白偏向性訊號</span><span class="keyword">PTSD</span><span class="keyword">大麻二酚</span><span class="keyword">恐懼消退</span><span class="keyword">nNOS</span><span class="keyword">Theta震盪</span><span class="keyword">前額葉皮質</span><span class="keyword">跨頻耦合</span><span class="keyword">決策</span><span class="keyword">tACS</span></div></div>
+
+  
+  <div class="link-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-name">李政洋身心診所首頁</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📧</span>
+      <span class="link-name">訂閱電子報</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+  <div class="link-banner">
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-name">Buy me a coffee</span>
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-ultra-550b-a55b</span>
+    <span><a href="https://github.com/u8901006/dlpfc-research">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
